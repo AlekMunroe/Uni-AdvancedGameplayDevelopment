@@ -8,7 +8,9 @@
     "com.unity.feature.gameplay-storytelling": "1.0.0",
     "com.unity.feature.worldbuilding": "1.0.1",
     "com.unity.ide.rider": "3.0.34",
+    "com.unity.profiling.core": "1.0.2",
     "com.unity.textmeshpro": "3.0.6",
+    "com.unity.toolchain.win-x86_64-linux-x86_64": "2.0.10",
     "com.unity.ugui": "1.0.0"
   }
 }
