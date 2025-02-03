@@ -1,21 +1,45 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
+/// <summary>
+/// This script wil be used to allow the player to interact with objects if they are in front of them
+/// </summary>
 public class PlayerInteraction : MonoBehaviour
 {
-    [SerializeField] private bool canInteract;
-    [SerializeField] private KeyCode interactKey = KeyCode.E;
-    
+    private bool isEDown;
     void Update()
     {
-        Interact();
-    }
-    private void Interact()
-    {
-        if (Input.GetKeyDown(interactKey) && canInteract)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            //TODO: Complete this
+            isEDown = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.E))
+        {
+            isEDown = false;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Interactable"))
+        {
+            //Get and call the interact script
+            IInteraction interaction = other.GetComponent<IInteraction>();
+            interaction.Interact();
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Pushable"))
+        {
+            if (isEDown)
+            {
+                Debug.Log("Has pressed push button");
+                other.GetComponent<PushableBlock>().Push();
+            }
         }
     }
 }

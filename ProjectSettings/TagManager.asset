@@ -13,6 +13,8 @@ TagManager:
   - keyItem2
   - dimensionMain
   - dimensionFuture
+  - Interactable
+  - Pushable
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
