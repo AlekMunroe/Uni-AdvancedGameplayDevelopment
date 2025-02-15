@@ -25,7 +25,21 @@ public class DoorController : MonoBehaviour, IInteraction
             KeyController.instance.RemoveKey(requiredKey);
 
             this.GetComponent<BoxCollider>().enabled = false; //Stops re-triggering the door
-            doorObject.GetComponent<Animation>().Play("DoorOpenAnim");
+
+            switch (requiredKey)
+            {
+                default:
+                    doorObject.GetComponent<Animation>().Play("DoorOpenAnim");
+                    break;
+                
+                //for vent door
+                case "Key_Screwdriver":
+                    doorObject.SetActive(false);
+                    break;
+                
+                //TODO: Vent door animation needed
+            }
+            
         }
         else
         {
