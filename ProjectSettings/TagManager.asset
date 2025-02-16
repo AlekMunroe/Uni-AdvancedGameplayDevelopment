@@ -15,6 +15,7 @@ TagManager:
   - dimensionFuture
   - Interactable
   - Pushable
+  - BlackLight
   layers:
   - Default
   - TransparentFX

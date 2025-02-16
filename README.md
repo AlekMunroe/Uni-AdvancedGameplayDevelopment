@@ -1,2 +1,1 @@
-20-01-2025
-* Initial commit of an empty Unity project
+Log can be found: https://uos-advancedgameplaydevelopment-2025.blogspot.com
