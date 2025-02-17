@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(this);
         }
+        
     }
 
     void Update()
