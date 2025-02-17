@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Scripts/BlackLight/BlackLight_Pickup.cs.meta
 guid: aa872ce5305c34b35a39784c59085c92
+========
+guid: 7c12d67a489c74c4390648654a43d5e1
+>>>>>>>> Stashed changes:Assets/Scripts/BlackLight/BlackLightController.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

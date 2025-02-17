@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Scripts/BlackLight/GraffitiController.cs.meta
 guid: 6145ca553d86144d483725d08b6634cd
+========
+guid: aa872ce5305c34b35a39784c59085c92
+>>>>>>>> Stashed changes:Assets/Scripts/BlackLight/BlackLight_Pickup.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

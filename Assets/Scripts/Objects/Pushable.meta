@@ -1,5 +1,21 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: 6dbee2d1d1dc44dd5ac6b1df416142b0
+=======
+<<<<<<<< Updated upstream:Assets/Scripts/Pushable.meta
+guid: 8b09bbbf29b19354bb6d0d9029404172
+========
+guid: 8dedaf005d9f08e408b08180894b4c88
+>>>>>>>> Stashed changes:Assets/Scripts/Objects/Pushable.meta
+>>>>>>> Stashed changes
+=======
+<<<<<<<< Updated upstream:Assets/Animations/WorldObjects/Lever.meta
+guid: f8661610cc8d248fe9988b1a071357f2
+========
+guid: 8dedaf005d9f08e408b08180894b4c88
+>>>>>>>> Stashed changes:Assets/Scripts/Objects/Pushable.meta
+>>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
