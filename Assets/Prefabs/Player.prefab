@@ -536,7 +536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   gravity: 10
-  rotationOffset: 45
+  rotationOffset: 0
   groundCheck: {fileID: 8932870133253244802}
   groundDistance: 0.2
   groundMask:
