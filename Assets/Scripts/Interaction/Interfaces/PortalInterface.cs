@@ -8,7 +8,7 @@ public class PortalInterface : MonoBehaviour, IInteraction
 {
     [SerializeField] private Camera oldCamera;
     [SerializeField] private Camera newCamera;
-    [Tooltip("This will be how far the player moves on the x axis")] 
+    [Tooltip("How far the player moves along the X axis.")] 
     [SerializeField] private float travelLocation = 1000;
 
     public BoxCollider boxCollider; //Used for drawing the box of the travel location
