@@ -44,6 +44,17 @@ public class MsgSystem : ScriptableObject
             _isDestroyed = true;
         }
     }
+    
+    public string GetMsg(Dictionary<string, string> placeholders)
+    {
+       string formattedMessage = message;
+       foreach (var placeholder in placeholders)
+       {
+           formattedMessage = formattedMessage.Replace(placeholder.Key, placeholder.Value);
+       }
+
+       return formattedMessage;
+    }
 
     protected MsgSystem() {}
 }

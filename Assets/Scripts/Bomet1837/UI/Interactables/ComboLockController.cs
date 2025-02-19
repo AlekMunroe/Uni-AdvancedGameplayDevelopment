@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ComboLockController : MonoBehaviour
 {
+    
     public int[] combination;
     public int corectCombination;
     
+    public bool isUnlocked = false;
     public TMPro.TextMeshProUGUI[] combinationDisplay;
+    public GameObject door; 
     
     void Start()
     {
@@ -16,11 +20,15 @@ public class ComboLockController : MonoBehaviour
         {
             combination[i] = 0;
         }
+        
+        gameObject.SetActive(false);
+
     }
 
     void Update()
     {
         ComboDisplay();
+        CheckCombination();
     }
     
     public void ComboDisplay()
@@ -46,6 +54,26 @@ public class ComboLockController : MonoBehaviour
         if (combination[index] < 0)
         {
             combination[index] = 9;
+        }
+    }
+
+    public void CheckCombination()
+    {
+        int tempCombination = 0;
+        for (int i = 0; i < combination.Length; i++)
+        {
+            tempCombination = tempCombination * 10 + combination[i];
+        }
+
+        if (tempCombination == corectCombination)
+        {
+            isUnlocked = true;
+            door.SetActive(false);
+        }
+        else
+        {
+            isUnlocked = false;
+            door.SetActive(true);
         }
     }
 }

@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: PuzzleNote4
+  m_Script: {fileID: 11500000, guid: febcddf1d09d3b24dbb39d76bb87c762, type: 3}
+  m_Name: PuzzleNote4_PlayerComment
   m_EditorClassIdentifier: Assembly-CSharp::MsgSystem_NewInfo
-  message: Level Four Puzzle Note 4.
+  message: '"And that''s the last one..."
+
+'
   type: 3
