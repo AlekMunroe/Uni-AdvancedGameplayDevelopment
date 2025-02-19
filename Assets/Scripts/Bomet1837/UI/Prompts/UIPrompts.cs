@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class UIPrompts : MonoBehaviour
@@ -9,29 +10,48 @@ public class UIPrompts : MonoBehaviour
     public MsgSystem promptMsg;
     
     private UIFunctions UIFunctions;
-    private DBInteraction DBInteraction;
+    [SerializeField] private DBInteraction[] DBInteraction;
+    [SerializeField] private bool[] isInteractable;
     
     void Start()
     {
-        UIFunctions = GameObject.FindObjectOfType<UIFunctions>();
-        DBInteraction = GameObject.FindObjectOfType<DBInteraction>();
+        UIFunctions = FindObjectOfType<UIFunctions>();
+        DBInteraction = FindObjectsOfType<DBInteraction>();
+        isInteractable = new bool[DBInteraction.Length];
         
         UIFunctions.CloseUI(promptUI);
     }
     void Update()
     {
-        if (DBInteraction.isInteractable && !DBInteraction.dBoxUI.activeSelf)
+        for (var i = 0; i < DBInteraction.Length; i++)
         {
-            UIFunctions.OpenUI(promptUI);
-            var placeholders = new Dictionary<string, string>
+            isInteractable[i] = DBInteraction[i].isInteractable;
+        }
+
+        for (var i = 0; i < isInteractable.Length; i++)
+        {
+            if (isInteractable[i])
             {
-                { "[InteractKey]", "E" }
-            };
-            promptText.text = promptMsg.GetMsg(placeholders);
+                promptUI.SetActive(true);
+                var placeholders = new Dictionary<string, string>
+                {
+                    { "[InteractKey]", "E" }
+                };
+                promptText.text = promptMsg.GetMsg(placeholders);
+            }
+            else if (!isInteractable.Contains(true))
+            {
+                promptUI.SetActive(false);
+            }
         }
-        else
-        {
-            UIFunctions.CloseUI(promptUI);
-        }
+
+
+
+
+    }
+    
+    void CheckInteractable(DBInteraction dbInteraction)
+    {
+        
     }
 }

@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6081256249392585975}
   - component: {fileID: 6081256249392585968}
   - component: {fileID: 6081256249392585969}
+  - component: {fileID: 4570815070727104239}
+  - component: {fileID: 3720005644571358940}
   m_Layer: 0
   m_Name: FutureBlock
   m_TagString: Pushable
@@ -112,3 +114,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMoveX: 1
   canMoveZ: 1
+--- !u!114 &4570815070727104239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081256249392585971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd65578408b74618b87f1ad2b25070e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isDestroyable: 0
+  _isPickupable: 0
+  _isObjectInPast: 0
+  _objectWeight: 0
+--- !u!54 &3720005644571358940
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081256249392585971}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

@@ -22,7 +22,10 @@ public class DBController : MonoBehaviour
 
     void Update()
     {
-        dialogueText.text = dialogues[dialogueIndex].message;
+        if (dialogueIndex >= 0 && dialogueIndex < dialogues.Count)
+        {
+            dialogueText.text = dialogues[dialogueIndex].message;
+        }
     }
 
 
