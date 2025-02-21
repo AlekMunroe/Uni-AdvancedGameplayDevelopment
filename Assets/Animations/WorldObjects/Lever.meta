@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Animations/WorldObjects/Lever.meta
 guid: f8661610cc8d248fe9988b1a071357f2
+========
+guid: 8dedaf005d9f08e408b08180894b4c88
+>>>>>>>> Stashed changes:Assets/Scripts/Objects/Pushable.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

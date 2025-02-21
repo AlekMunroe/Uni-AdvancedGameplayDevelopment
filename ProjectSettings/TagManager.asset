@@ -4,19 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ground
-  - Tel
-  - telTarget
-  - OOB
-  - intField
-  - keyItem1
-  - keyItem2
-  - dimensionMain
-  - dimensionFuture
   - Interactable
-  - Pushable
   - BlackLight
-  - _GameError
+  - Pushable
   layers:
   - Default
   - TransparentFX
@@ -24,11 +14,11 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
+  - 
+  - 
+  - 
   - PostProcessing
-  - 
-  - 
-  - 
   - 
   - 
   - 
