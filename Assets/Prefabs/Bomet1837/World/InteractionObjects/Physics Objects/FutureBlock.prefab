@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6081256249392585969}
   - component: {fileID: 4570815070727104239}
   - component: {fileID: 3720005644571358940}
+  - component: {fileID: 3604292928220312688}
   m_Layer: 0
   m_Name: FutureBlock
   m_TagString: Pushable
@@ -146,3 +147,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3604292928220312688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081256249392585971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d909ca71bbc9a0646b00a16f96285b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

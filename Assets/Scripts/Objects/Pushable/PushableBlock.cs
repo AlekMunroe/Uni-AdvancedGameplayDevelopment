@@ -69,4 +69,16 @@ public class PushableBlock : MonoBehaviour
         //Actually move
         this.transform.position = new Vector3(newX, this.transform.position.y, newZ);
     }
+    
+    public void Lock()
+    {
+        canMoveX = false;
+        canMoveZ = false;
+    }
+    
+    public void Unlock()
+    {
+        canMoveX = true;
+        canMoveZ = true;
+    }
 }

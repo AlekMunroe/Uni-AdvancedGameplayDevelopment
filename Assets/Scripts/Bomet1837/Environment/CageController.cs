@@ -7,6 +7,7 @@ public class CageController : MonoBehaviour
     public enum CageType
     {
         Default,
+        Static,
         Trigger,
     }
 
@@ -19,7 +20,7 @@ public class CageController : MonoBehaviour
     }
     
     private GameObject _player;
-    public GameObject triggerObject;
+    //public GameObject triggerObject;
     [SerializeField] private GameObject _cageModel;
     public CageType cageType;
     
@@ -44,7 +45,30 @@ public class CageController : MonoBehaviour
             case CageType.Trigger:
                 //TODO: Implement triggered cage for use in level 9
                 break;
+            
+            case CageType.Static:
+                _cageModel.SetActive(true);
+                break;
         }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Pushable"))
+        {
+            other.GetComponent<ObjectProperties>().setPickupable(false);
+            other.GetComponent<PushableBlock>().Lock();
+        }
+    }
+    
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Pushable"))
+        {
+            other.GetComponent<ObjectProperties>().setPickupable(true);
+            other.GetComponent<PushableBlock>().Unlock();
+        }
+        
     }
     
     public void TriggerCage(TriggerAction action)

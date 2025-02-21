@@ -38,10 +38,12 @@ public class UIFunctions : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = !GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled;
     }
 
-    public void OOB(GameObject player)
+    public void OOB(GameObject player, Vector3 position)
     {
-        player.transform.position = new Vector3(0, 0, 0);
+        player.transform.position = position;
     }
+    
+    
 
     public void Pause()
     {

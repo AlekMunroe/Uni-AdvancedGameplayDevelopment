@@ -479,6 +479,8 @@ GameObject:
   - component: {fileID: 8932870133802162903}
   - component: {fileID: 8932870133802162902}
   - component: {fileID: 8932870132369426621}
+  - component: {fileID: 3879719341253572726}
+  - component: {fileID: 6385991724155247095}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -519,7 +521,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &8932870133802162902
@@ -536,9 +538,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   gravity: 10
-  rotationOffset: 0
+  turnSpeed: 0
+  currentAngle: 0
+  currentAngleVelocity: 0
   groundCheck: {fileID: 8932870133253244802}
-  groundDistance: 0.2
+  groundDistance: 0.75
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -556,6 +560,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackLight: {fileID: 1820720120}
+--- !u!114 &3879719341253572726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8932870133802162896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098cdf24180e545458d808be36a88afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTimeline: 0
+--- !u!114 &6385991724155247095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8932870133802162896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d909ca71bbc9a0646b00a16f96285b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8932870134092326461
 GameObject:
   m_ObjectHideFlags: 0
