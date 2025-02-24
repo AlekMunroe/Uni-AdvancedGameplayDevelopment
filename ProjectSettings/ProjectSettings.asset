@@ -925,8 +925,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
-    Collab: 1
+    Build: 0
+    Collab: 0
+    Game Performance: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -940,11 +945,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 499f18c8-a5e0-439b-b90b-48f6f7c59a61
+  cloudProjectId: 7242d271-afde-4c71-bf8f-d1f1f7238f7b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: My project
-  organizationId: unity_9aea9211c75c14220ac8
+  projectName: AGDGAME
+  organizationId: mobet_zoje
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

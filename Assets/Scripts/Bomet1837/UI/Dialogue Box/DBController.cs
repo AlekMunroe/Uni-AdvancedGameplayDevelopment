@@ -9,13 +9,18 @@ public class DBController : MonoBehaviour
     public TMPro.TextMeshProUGUI dialogueText;
     public GameObject dBoxUI;
     
-    private UIFunctions UIFunctions;
+    [SerializeField] private UIFunctions UIFunctions;
     public int dialogueIndex = 0;
     public List<MsgSystem> dialogues;
 
     void Start()
     {
-        UIFunctions = GameObject.FindObjectOfType<UIFunctions>();
+        UIFunctions = FindObjectOfType<UIFunctions>();
+        if (UIFunctions == null)
+        {
+            Debug.LogError("UIFunctions component not found in the scene.");
+        }
+
         ClearDialogue();
         HideBox();
     }
@@ -62,8 +67,15 @@ public class DBController : MonoBehaviour
     
     public void HideBox()
     {
-        UIFunctions.EnableControls();
-        UIFunctions.CloseUI(gameObject);
+        if (UIFunctions != null)
+        {
+            UIFunctions.EnableControls();
+            UIFunctions.CloseUI(gameObject);
+        }
+        else if (UIFunctions == null)
+        {
+            Debug.LogError("UIFunctions is not assigned.");
+        }
     }
     
     public void AddDialogue(MsgSystem dialogue)

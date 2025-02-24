@@ -14,6 +14,8 @@ public class ComboLockController : MonoBehaviour
     public TMPro.TextMeshProUGUI[] combinationDisplay;
     public GameObject door; 
     
+    [HideInInspector] public bool messageDisplayed = false;
+    
     void Start()
     {
         for (int i = 0; i < combination.Length; i++)

@@ -1,7 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
+
+using UnityEngine;
+
 using Cinemachine;
 
 public class PortalInterfaceVcamVariant: MonoBehaviour, IInteraction
@@ -16,17 +21,20 @@ public class PortalInterfaceVcamVariant: MonoBehaviour, IInteraction
     
     public BoxCollider boxCollider; //Used for drawing the box of the travel location
     
+    
+    
+    public void Interact()
+    {
+        TTCCinemachineVariant.Instance.TimeTravel(_currentCameraIndex, _travelLocation);
+    }
+
+#if UNITY_EDITOR
     private void OnValidate()
     {
         if (boxCollider == null)
         {
             boxCollider = GetComponent<BoxCollider>();
         }
-    }
-    
-    public void Interact()
-    {
-        TTCCinemachineVariant.Instance.TimeTravel(_currentCameraIndex, _travelLocation);
     }
     
     private void OnDrawGizmosSelected()
@@ -51,6 +59,7 @@ public class PortalInterfaceVcamVariant: MonoBehaviour, IInteraction
             Handles.Label(newPosition + boxCollider.center, "Portal Destination", style);
         }
     }
+#endif
     
     
 }

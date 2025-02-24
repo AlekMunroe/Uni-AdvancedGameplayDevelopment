@@ -31,4 +31,10 @@ public class OOB : MonoBehaviour
         
         
     }
+
+    public void OOBButton()
+    {
+        UIF.OOB(gameObject, origin);
+        TTCCV.ResetCamera();
+    }
 }

@@ -69,6 +69,7 @@ public class UIFunctions : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
+    
 
     public void QuitGame()
     {

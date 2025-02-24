@@ -12,11 +12,11 @@ public class PlayerInteraction : MonoBehaviour
     private bool isEDown;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) && !TimeTravelController.Instance.isTravellingTime())
+        if (Input.GetKeyDown(KeyCode.L) && !TTCCinemachineVariant.Instance.IsTravellingTime())
         {
             isEDown = true;
         }
-        else if (Input.GetKeyUp(KeyCode.L) || TimeTravelController.Instance.isTravellingTime())
+        else if (Input.GetKeyUp(KeyCode.L) || TTCCinemachineVariant.Instance.IsTravellingTime())
         {
             isEDown = false;
         }

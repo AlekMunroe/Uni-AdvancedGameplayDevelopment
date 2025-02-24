@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class KeyItem : MonoBehaviour, IInteraction
 {
-    [SerializeField] private string keyName;
+    public string keyName;
+    [HideInInspector] public bool messageDisplayed = false;
     
     public virtual void Interact()
     {

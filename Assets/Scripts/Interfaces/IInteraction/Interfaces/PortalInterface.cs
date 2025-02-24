@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 [RequireComponent(typeof(BoxCollider))]
 public class PortalInterface : MonoBehaviour, IInteraction
@@ -13,17 +15,20 @@ public class PortalInterface : MonoBehaviour, IInteraction
 
     public BoxCollider boxCollider; //Used for drawing the box of the travel location
     
+    
+    
+    public virtual void Interact()
+    {
+        TimeTravelController.Instance.TimeTravel(oldCamera, newCamera, travelLocation);
+    }
+
+#if UNITY_EDITOR
     private void OnValidate()
     {
         if (boxCollider == null)
         {
             boxCollider = GetComponent<BoxCollider>();
         }
-    }
-    
-    public virtual void Interact()
-    {
-        TimeTravelController.Instance.TimeTravel(oldCamera, newCamera, travelLocation);
     }
     
     private void OnDrawGizmosSelected()
@@ -48,4 +53,5 @@ public class PortalInterface : MonoBehaviour, IInteraction
             Handles.Label(newPosition + boxCollider.center, "Portal Destination", style);
         }
     }
+#endif
 }

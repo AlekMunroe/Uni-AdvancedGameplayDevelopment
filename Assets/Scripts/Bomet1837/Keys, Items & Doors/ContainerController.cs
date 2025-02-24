@@ -7,13 +7,18 @@ using UnityEngine;
 public class ContainerController : MonoBehaviour, IInteraction
 {
     [Header("Container Settings")]
-    [SerializeField] private string contName;
+    public string contName;
     [SerializeField] private string requiredKey;
     [SerializeField] private bool needsKey;
     
     [Header("Container References")]
     [SerializeField] private GameObject containerObject;
     [SerializeField] private GameObject contents;
+    
+    [HideInInspector] public bool messageDisplayed = false;
+    [HideInInspector] public bool wasItLocked = false;
+    [HideInInspector] public bool wasItKeyless = false;
+    
 
     public void Start()
     {
@@ -30,6 +35,7 @@ public class ContainerController : MonoBehaviour, IInteraction
             case null when !needsKey:
             {
                 //No key required for this container
+                wasItKeyless = true;
                 containerObject.SetActive(false);
                 if (!contents.activeSelf)
                 {
@@ -62,6 +68,7 @@ public class ContainerController : MonoBehaviour, IInteraction
                 else
                 {
                     //The player does not have the key
+                    wasItLocked = true;
                     Debug.Log("The player does not have the key: " + requiredKey);
                 }
 

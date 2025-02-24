@@ -9,8 +9,11 @@ using UnityEngine.Animations;
 public class DoorController : MonoBehaviour, IInteraction
 {
     [SerializeField] private string requiredKey;
-    private bool isDoorLocked = true;
+    [HideInInspector] public bool isDoorLocked = true;
     [SerializeField] private GameObject doorObject;
+    
+    [HideInInspector] public bool messageDisplayed = false;
+    [HideInInspector] public bool wasItLocked = false;
     
     public virtual void Interact()
     {
@@ -45,6 +48,7 @@ public class DoorController : MonoBehaviour, IInteraction
         {
             //The player does not have the key
             Debug.Log("The player does not have the key: " + requiredKey);
+            wasItLocked = true;
         }
     }
 }

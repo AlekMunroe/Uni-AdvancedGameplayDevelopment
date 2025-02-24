@@ -12,11 +12,23 @@ public class DBInteraction: MonoBehaviour
     
     public KeyCode interactKey = KeyCode.E;
     
-    private DBController dbController;
+   [SerializeField] private DBController dbController;
     
     private void Start()
     {
-        dbController = dBoxUI.GetComponent<DBController>();
+        
+        if (dBoxUI != null)
+        {
+            dbController = dBoxUI.GetComponent<DBController>();
+            if (dbController == null)
+            {
+                Debug.LogError("DBController component not found on dBoxUI.");
+            }
+        }
+        else
+        {
+            Debug.LogError("dBoxUI is not assigned.");
+        }
     }
 
     private void Update()
