@@ -13,12 +13,15 @@ public class BoxDisplayController : MonoBehaviour
     [SerializeField] private int _signalsRequired;
     [SerializeField] private BoxRequisiteDisplay_PressurePlate[] _signals;
     
-    private bool _isActivated;
+    public bool _isActivated;
+    public BoxDisplayController instance;
 
     void Start()
     {
         _display.enabled = true;
         _signalsRequired = _signals.Length;
+        
+        instance = this;
     }
 
     void Update()
