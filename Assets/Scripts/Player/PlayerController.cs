@@ -2,38 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.Animations;
 
 /// <summary>
 /// This script will handle the player movement and rotation
 /// </summary>
 
-[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
     
     [Header("Movement and Input")]
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float gravity = 10f;
-    private float turnSpeed = 5, currentAngle, currentAngleVelocity;
-    
-    private Rigidbody _rb;
-    private Vector3 _input, _camEuler, _targetPos, _moveDir;
-    private Camera _camera;
+    public float moveSpeed = 5f;
+    public float jumpForce = 2f;
+    public float gravity = 20f;
+    public float rotationSpeed = 5f;
 
-    [Header("Jumping")] 
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private float groundDistance = 0.2f;
-    [SerializeField] private LayerMask groundMask;
-    private bool _isGrounded;
+    private CharacterController controller;
+    private Vector3 velocity;
+    private bool isGrounded;
+    
+    private Camera _camera;
+    private bool isPlayerFrozen;
+    private Transform cameraTransform;
 
     [Header("Required Player Objects")] 
     public Transform playerPushPosition; //This has to be public
 
+    [Header("Player Model and Animations")] 
+    [SerializeField] private GameObject characterObject;
+    private Animation _anim;
+
     void Start()
     {
-        _rb = this.GetComponent<Rigidbody>();
         _camera = Camera.main;
+        _anim = characterObject.GetComponent<Animation>();
+        controller = GetComponent<CharacterController>();
+        cameraTransform = _camera.transform;
         
         Instance = this;
         if (Instance != null)
@@ -49,60 +54,77 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        HandleMovement();
-        HandleJumping();
-        
+        if (!isPlayerFrozen)
+        {
+            //Check if grounded
+            isGrounded = controller.isGrounded;
+            if (isGrounded && velocity.y < 0)
+            {
+                velocity.y = -2f;
+            }
+
+            //Player input
+            float moveX = Input.GetAxisRaw("Horizontal");
+            float moveZ = Input.GetAxisRaw("Vertical");
+
+            //Input to the relative direction of the camera
+            Vector3 moveDirection = (cameraTransform.forward * moveZ + cameraTransform.right * moveX).normalized;
+            moveDirection.y = 0f;
+
+            //Actually move
+            if (moveDirection.magnitude >= 0.1f)
+            {
+                //Rotate
+                Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+                //Move
+                controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+
+                ChangeAnimation("WalkAnim", 0.5f);
+            }
+            else
+            {
+                ChangeAnimation("IdleAnim", 0.25f);
+            }
+
+            //Jumping
+            if (isGrounded && Input.GetButtonDown("Jump"))
+            {
+                velocity.y = Mathf.Sqrt(jumpForce * 2f * gravity);
+            }
+
+            //Gravity
+            velocity.y -= gravity * Time.deltaTime;
+            controller.Move(velocity * Time.deltaTime);
+        }
     }
 
-    void HandleMovement()
+    void ChangeAnimation(string animationName, float fadeTime)
     {
-        //Get the input from the user
-        _input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
-        _camEuler = _camera.transform.eulerAngles;
-        
-        if (_input.magnitude >= 0.1f) 
-        {
-            
-            //Calculate the angle to rotate the player
-            float targetAngle = Mathf.Atan2(_input.x, _input.z) * Mathf.Rad2Deg + _camEuler.y;
-                
-            currentAngle = Mathf.SmoothDampAngle(currentAngle, targetAngle, ref currentAngleVelocity, turnSpeed);
-            currentAngle = Mathf.Clamp(currentAngle, -90, 90);
-            transform.rotation = Quaternion.Euler(0, targetAngle, 0); //Look position
-
-            
-            _moveDir = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
-        } 
-        
-        //Actually move
-        if (_input.magnitude >= 0.1f || !_isGrounded)
-        {
-            transform.localPosition += speed * Time.deltaTime * _moveDir;
-        }
-        else if (_input.magnitude < 0.1f && _isGrounded)
-        {
-            _rb.velocity = Vector3.zero;
-        }
-
+        _anim.CrossFade(animationName, fadeTime);
     }
-    
 
-    void HandleJumping()
+    public IEnumerator FreezePlayer(float duration)
     {
-        //Check if the player is grounded
-        _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask | LayerMask.GetMask("PuzzleBox"));
-        
-        if (!_isGrounded)
+        if (duration != 0)
         {
-            //Force the player onto the ground
-            _rb.AddForce(Vector3.down * gravity);
+            //Freeze player with time
+            isPlayerFrozen = true;
+
+            yield return new WaitForSeconds(duration);
+
+            isPlayerFrozen = false;
         }
-        
-        //Handle jumping
-        if (Input.GetButtonDown("Jump") && _isGrounded)
+        else
         {
-            _rb.AddForce(Vector3.up * gravity, ForceMode.Impulse);
-            _isGrounded = false;
+            //Freeze player until toggled off
+            isPlayerFrozen = true;
         }
+    }
+
+    public void UnfreezePlayer()
+    {
+        isPlayerFrozen = false;
     }
 }

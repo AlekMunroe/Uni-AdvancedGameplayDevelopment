@@ -9,8 +9,8 @@ public class KeyItem : MonoBehaviour, IInteraction
     [HideInInspector] public bool messageDisplayed = false;
     
     public virtual void Interact()
-    {
-            KeyController.instance.AddKey(keyName);
-            Destroy(this.gameObject);
+    { 
+        KeyController.instance.AddKey(keyName); 
+        Destroy(this.gameObject);
     }
 }

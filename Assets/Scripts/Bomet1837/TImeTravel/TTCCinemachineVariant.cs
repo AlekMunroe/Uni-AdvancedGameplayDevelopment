@@ -71,6 +71,8 @@ public class TTCCinemachineVariant : MonoBehaviour
 
         
         //Move the player (+travelLocation on the x)
+        StartCoroutine(PlayerController.Instance.FreezePlayer(0.5f));
+        
         _playerObject.transform.position = new Vector3(_playerObject.transform.position.x + travelLocation,
             _playerObject.transform.position.y + 0.1f, _playerObject.transform.position.z);
 
