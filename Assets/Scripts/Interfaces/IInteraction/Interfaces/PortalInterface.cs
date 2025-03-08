@@ -1,29 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 [RequireComponent(typeof(BoxCollider))]
 public class PortalInterface : MonoBehaviour, IInteraction
 {
     [SerializeField] private Camera oldCamera;
     [SerializeField] private Camera newCamera;
-    [Tooltip("This will be how far the player moves on the x axis")] 
+    [Tooltip("How far the player moves along the X axis.")] 
     [SerializeField] private float travelLocation = 1000;
 
     public BoxCollider boxCollider; //Used for drawing the box of the travel location
     
+    
+    
+    public virtual void Interact()
+    {
+        TimeTravelController.Instance.TimeTravel(oldCamera, newCamera, travelLocation);
+    }
+
+#if UNITY_EDITOR
     private void OnValidate()
     {
         if (boxCollider == null)
         {
             boxCollider = GetComponent<BoxCollider>();
         }
-    }
-    
-    public virtual void Interact()
-    {
-        TimeTravelController.Instance.TimeTravel(oldCamera, newCamera, travelLocation);
     }
     
     private void OnDrawGizmosSelected()
@@ -48,4 +53,5 @@ public class PortalInterface : MonoBehaviour, IInteraction
             Handles.Label(newPosition + boxCollider.center, "Portal Destination", style);
         }
     }
+#endif
 }

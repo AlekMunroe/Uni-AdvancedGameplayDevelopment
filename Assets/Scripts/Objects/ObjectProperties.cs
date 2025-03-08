@@ -18,6 +18,11 @@ public class ObjectProperties : MonoBehaviour
     {
         return _isPickupable;
     }
+    
+    public void setPickupable(bool value)
+    {
+        _isPickupable = value;
+    }
 
     public bool isObjectInPast()
     {
