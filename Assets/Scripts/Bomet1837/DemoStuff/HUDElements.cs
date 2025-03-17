@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using PlayerControls;
 
 /// <summary>
 /// A class that manages various for the game's HUD.
@@ -146,7 +147,7 @@ public class HUDElements : MonoBehaviour
                         BlackLight_Pickup blacklight = pickup;
                         if (blacklight == null && !blacklight.messageDisplayed)
                         {
-                           messages.Add( MsgSystem.CreateInstance("Picked up " + blacklight.gameObject.name, MsgType.Success));
+                           messages.Add( MsgSystem.CreateInstance("Picked up " + blacklight.gameObject.name + ". Press [" + PlayerControls.PlayerControls.blacklightKey + "] to use.", MsgType.Success));
                            blacklight.messageDisplayed = true;
                         }
 

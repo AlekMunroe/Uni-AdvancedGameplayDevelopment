@@ -4610,7 +4610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6325083735521957805, guid: c219e917c2c9d6d46a0d2384b14e0109, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6325083735521957805, guid: c219e917c2c9d6d46a0d2384b14e0109, type: 3}
       propertyPath: m_AnchorMax.x
@@ -53509,6 +53509,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7175415826860931914}
     m_Modifications:
+    - target: {fileID: 1195809223997802889, guid: 8849329deee1da74490ced452fef8d79, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 74554389}
+    - target: {fileID: 3137812791900983447, guid: 8849329deee1da74490ced452fef8d79, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 74554389}
+    - target: {fileID: 3137812791900983447, guid: 8849329deee1da74490ced452fef8d79, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Hover
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130315428225024824, guid: 8849329deee1da74490ced452fef8d79, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 74554389}
+    - target: {fileID: 6801695446190860795, guid: 8849329deee1da74490ced452fef8d79, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 74554389}
     - target: {fileID: 7702025946852477756, guid: 8849329deee1da74490ced452fef8d79, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
@@ -53739,7 +53759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7702025947362951577, guid: 8849329deee1da74490ced452fef8d79, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7702025947362951577, guid: 8849329deee1da74490ced452fef8d79, type: 3}
       propertyPath: m_AnchorMax.x
@@ -53813,6 +53833,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8195968622341779358, guid: 8849329deee1da74490ced452fef8d79, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 74554389}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8849329deee1da74490ced452fef8d79, type: 3}
 --- !u!114 &928401411 stripped
@@ -56095,6 +56119,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7175415826860931914}
     m_Modifications:
+    - target: {fileID: 2179852046058844954, guid: 8ad0320b2a2c943448b2d9fb0fde73e6, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 74554389}
     - target: {fileID: 5455241402918887757, guid: 8ad0320b2a2c943448b2d9fb0fde73e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -56363,6 +56391,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7966171502889427724, guid: 8ad0320b2a2c943448b2d9fb0fde73e6, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 74554389}
+    - target: {fileID: 9015820303400324493, guid: 8ad0320b2a2c943448b2d9fb0fde73e6, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 74554389}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ad0320b2a2c943448b2d9fb0fde73e6, type: 3}
 --- !u!43 &1200379955
@@ -56806,7 +56842,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362505826}
-  m_LocalRotation: {x: 0.0013659095, y: -0.7059783, z: 0.0013615651, w: 0.70823085}
+  m_LocalRotation: {x: 0.0013658961, y: -0.7059783, z: 0.0013615517, w: 0.70823085}
   m_LocalPosition: {x: -3.7600098, y: 4.8427553, z: -3.1736183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -64254,9 +64290,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7175415826278246245}
-        m_TargetAssemblyTypeName: DBController, Assembly-CSharp
-        m_MethodName: NextDialogue
+      - m_Target: {fileID: 74554389}
+        m_TargetAssemblyTypeName: UIFunctions, Assembly-CSharp
+        m_MethodName: Hover
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -64945,8 +64981,8 @@ RectTransform:
   - {fileID: 7175415825695216652}
   - {fileID: 7175415825266310484}
   - {fileID: 1758806902}
-  - {fileID: 612863995}
   - {fileID: 234044950}
+  - {fileID: 612863995}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

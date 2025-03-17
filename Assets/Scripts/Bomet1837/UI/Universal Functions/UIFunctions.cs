@@ -93,6 +93,7 @@ public class UIFunctions : MonoBehaviour
         }
         
         ui.SetActive(false);
+        Unpause();
         
         
     }
@@ -150,11 +151,13 @@ public class UIFunctions : MonoBehaviour
     public void Restart()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        Unpause();
     }
 
     public void LoadScene(string sceneName)
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        Unpause();
     }
     
 
