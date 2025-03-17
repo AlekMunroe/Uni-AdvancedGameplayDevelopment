@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 /// <summary>
 /// A window that creates event triggers for all buttons in the scene. *WIP*
 /// </summary>
+#if UNITY_EDITOR
 public class ButtonEventWizard : EditorWindow
 {
     [MenuItem("Tools/Bomet1837/Button Event Wizard")]
@@ -30,3 +31,4 @@ public class ButtonEventWizard : EditorWindow
 
 
 }
+#endif

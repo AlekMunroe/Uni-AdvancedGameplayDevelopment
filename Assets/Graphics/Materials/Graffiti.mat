@@ -37,6 +37,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColour: {r: 0.5707547, g: 1, b: 0.8272078, a: 1}
-    - _LightDir: {r: 0.21593502, g: -0, b: -0.9764077, a: 0}
-    - _LightPos: {r: 0.9288038, g: 0.7087951, b: 8.657799, a: 0}
+    - _LightDir: {r: -0.6093397, g: -0, b: -0.79290926, a: 0}
+    - _LightPos: {r: 1.7053876, g: 0.6920853, b: 8.485128, a: 0}
   m_BuildTextureStacks: []
