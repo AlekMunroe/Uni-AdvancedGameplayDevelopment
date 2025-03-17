@@ -13,17 +13,37 @@ public class DBController : MonoBehaviour
     public int dialogueIndex = 0;
     public List<MsgSystem> dialogues;
 
-    void Start()
+    void Awake()
     {
         UIFunctions = FindObjectOfType<UIFunctions>();
         if (UIFunctions == null)
         {
             Debug.LogError("UIFunctions component not found in the scene.");
         }
-
-        ClearDialogue();
-        HideBox();
     }
+
+    void Start()
+    {
+        StartCoroutine(InitializeUI());
+    }
+
+    IEnumerator InitializeUI()
+    {
+        // Wait for one frame to ensure UIFunctions is initialized
+        yield return null;
+
+        if (UIFunctions != null)
+        {
+            HideBox();
+            ClearDialogue();
+        }
+        else
+        {
+            Debug.LogError("UIFunctions is not assigned.");
+        }
+    }
+
+    
 
     void Update()
     {

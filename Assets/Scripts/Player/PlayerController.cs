@@ -17,24 +17,32 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravity = 10f;
     private float turnSpeed = 5, currentAngle, currentAngleVelocity;
     
-    private Rigidbody _rb;
-    private Vector3 _input, _camEuler, _targetPos, _moveDir;
+    [HideInInspector] public Rigidbody _rb;
+    [HideInInspector] public Vector3 _input, _camEuler, _targetPos, _moveDir;
     private Camera _camera;
+    [SerializeField] private Animator _animator;
+    private PlayerAudioController _audioController;
 
     [Header("Jumping")] 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundDistance = 0.2f;
     [SerializeField] private LayerMask groundMask;
-    private bool _isGrounded;
+    
+    //updated to public for audio script
+    [HideInInspector] public bool _isGrounded;
+    public Material currentMat;
+    
 
     [Header("Required Player Objects")] 
     public Transform playerPushPosition; //This has to be public
 
     void Start()
     {
+        _audioController = GetComponent<PlayerAudioController>();
         _rb = this.GetComponent<Rigidbody>();
         _camera = Camera.main;
-        
+        _animator = this.GetComponentInChildren<Animator>();
+
         Instance = this;
         if (Instance != null)
         {
@@ -52,6 +60,12 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleJumping();
         
+    }
+
+    void FixedUpdate()
+    {
+        HandleAnim();
+        GroundMat();
     }
 
     void HandleMovement()
@@ -85,7 +99,12 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    
+
+    void HandleAnim()
+    {
+        _animator.SetFloat("Velocity", _input.magnitude);
+    }
+
 
     void HandleJumping()
     {
@@ -101,8 +120,28 @@ public class PlayerController : MonoBehaviour
         //Handle jumping
         if (Input.GetButtonDown("Jump") && _isGrounded)
         {
+            _audioController.PlayJump();
             _rb.AddForce(Vector3.up * gravity, ForceMode.Impulse);
             _isGrounded = false;
         }
+    }
+
+    void GroundMat()
+    {
+        
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Renderer renderer = collision.collider.GetComponent<Renderer>();
+        if (renderer != null)
+            {
+                currentMat = renderer.material;
+            }
+            else
+            {
+                Debug.Log("No renderer found!");
+            }
+        
     }
 }

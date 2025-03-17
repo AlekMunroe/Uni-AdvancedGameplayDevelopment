@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class OnLevelDisplaysAtReqValue : MonoBehaviour
 {
-    public GameObject door;
+    public static OnLevelDisplaysAtReqValue instance;
     
     private BoxDisplayController[] _dispsActivated;
-    private bool[] _dispsActivatedBool;
+    [HideInInspector] public bool[] _dispsActivatedBool;
 
     void Start()
     {
         _dispsActivated = FindObjectsOfType<BoxDisplayController>() ;
         _dispsActivatedBool = new bool[_dispsActivated.Length];
+        instance = this;
     }
     
     public void Update()
@@ -23,32 +24,17 @@ public class OnLevelDisplaysAtReqValue : MonoBehaviour
 
     public void CheckDisplays()
     {
-        foreach (var d in _dispsActivated)
+        for (var d = 0; d < _dispsActivated.Length; d++)
         {
-            if (d._isActivated)
+            if (_dispsActivated[d]._isActivated)
             {
-                _dispsActivatedBool[_dispsActivated.Length] = true;
+                _dispsActivatedBool[d] = true;
             }
             else 
             {
-                _dispsActivatedBool[_dispsActivated.Length] = false;
+                _dispsActivatedBool[d] = false;
             }
         }
-        
-        if (_dispsActivatedBool.All(x => x == true))
-        {
-            door.SetActive(false); 
-        }
-        else
-        { 
-            door.SetActive(true);
-        }
-
-
-        
-        
-        
-
     }
 
  

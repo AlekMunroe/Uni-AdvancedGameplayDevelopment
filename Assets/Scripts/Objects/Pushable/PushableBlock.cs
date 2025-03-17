@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PlayerControls;
 
 [RequireComponent(typeof(ObjectProperties))]
 public class PushableBlock : MonoBehaviour
 {
-    [SerializeField] private bool canMoveX;
-    [SerializeField] private bool canMoveZ;
+    // updated these variables for reference in the BoxInteract script
+    [HideInInspector] public bool canMoveX;
+    [HideInInspector] public bool canMoveZ;
+    
+
+    public KeyCode pushKey = PlayerControls.PlayerControls.pushKey;
     
     private Transform playerPushPosition;
     private Vector3 startPosition;
@@ -26,7 +31,7 @@ public class PushableBlock : MonoBehaviour
             PushThis();
         }
 
-        if (Input.GetKeyUp(KeyCode.L) || TimeTravelController.Instance.isTravellingTime())
+        if (Input.GetKeyUp(PlayerControls.PlayerControls.pushKey) || TimeTravelController.Instance.isTravellingTime())
         {
             isPushing = false;
         }

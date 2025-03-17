@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using Unity.Mathematics;
-
+using PlayerControls;
 public class ToggleFPLightCam : MonoBehaviour
 {
     [Header("Camera Settings")]
@@ -34,7 +34,7 @@ public class ToggleFPLightCam : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && _hasTorch)
+        if (Input.GetKeyDown(PlayerControls.PlayerControls.blacklightKey) && _hasTorch)
         {
             _camToggle = !_camToggle;
         }

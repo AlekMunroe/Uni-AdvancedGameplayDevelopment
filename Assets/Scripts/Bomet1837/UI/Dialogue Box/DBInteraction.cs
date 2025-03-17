@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PlayerControls;
 
 public class DBInteraction: MonoBehaviour
 {
@@ -9,8 +10,6 @@ public class DBInteraction: MonoBehaviour
     
     public GameObject dBoxUI;
     public List<MsgSystem> dialogues = new List<MsgSystem>();
-    
-    public KeyCode interactKey = KeyCode.E;
     
    [SerializeField] private DBController dbController;
     
@@ -33,7 +32,7 @@ public class DBInteraction: MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(interactKey))
+        if (Input.GetKeyDown(PlayerControls.PlayerControls.interactKey))
         {
             Interact();
         }

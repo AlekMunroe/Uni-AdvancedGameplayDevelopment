@@ -30,13 +30,13 @@ Material:
     m_Floats:
     - _CutOff: 0.797
     - _GlowIntensity: 0.821
-    - _LightAngle: 30
+    - _LightAngle: 40.1
     - _Metallic: 0
     - _Smooth: 0
     - _StrengthScalar: 128.04
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColour: {r: 0.5707547, g: 1, b: 0.8272078, a: 1}
-    - _LightDir: {r: 0.8521387, g: -0.09890729, b: -0.5138843, a: 0}
-    - _LightPos: {r: -1.5162004, g: 1.5238272, b: 4.927007, a: 0}
+    - _LightDir: {r: -0.29913917, g: -0, b: 0.95420957, a: 0}
+    - _LightPos: {r: 1.4134912, g: 0.41797805, b: 6.8410892, a: 0}
   m_BuildTextureStacks: []

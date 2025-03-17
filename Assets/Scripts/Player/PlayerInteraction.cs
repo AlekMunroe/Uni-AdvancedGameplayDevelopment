@@ -3,20 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using PlayerControls;
 
 /// <summary>
-/// This script wil be used to allow the player to interact with objects if they are in front of them
+/// This script will be used to allow the player to interact with objects if they are in front of them.
 /// </summary>
 public class PlayerInteraction : MonoBehaviour
 {
     private bool isEDown;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) && !TTCCinemachineVariant.Instance.IsTravellingTime())
+        if (Input.GetKeyDown(PlayerControls.PlayerControls.pushKey) && !TTCCinemachineVariant.Instance.IsTravellingTime())
         {
             isEDown = true;
         }
-        else if (Input.GetKeyUp(KeyCode.L) || TTCCinemachineVariant.Instance.IsTravellingTime())
+        else if (Input.GetKeyUp(PlayerControls.PlayerControls.pushKey) || TTCCinemachineVariant.Instance.IsTravellingTime())
         {
             isEDown = false;
         }

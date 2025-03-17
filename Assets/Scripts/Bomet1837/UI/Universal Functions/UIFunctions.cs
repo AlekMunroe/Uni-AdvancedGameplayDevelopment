@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 /// <summary>
@@ -8,19 +10,104 @@ using UnityEngine;
 /// </summary>
 public class UIFunctions : MonoBehaviour
 {
+    
+    public AudioSource
+    uiConfirmPrompt,
+    uiSelect,
+    uiCancel,
+    uiHover,
+    uiOpen,
+    uiClose;
+
+    Canvas[] canvasSearch;
+    
+
+
+    public void Start()
+    {
+        canvasSearch = FindObjectsOfType<Canvas>();
+
+        uiConfirmPrompt = GameObject.Find("UIConfirmPrompt").GetComponent<AudioSource>();
+        uiSelect = GameObject.Find("UISelect").GetComponent<AudioSource>();
+        uiCancel = GameObject.Find("UICancel").GetComponent<AudioSource>();
+        uiHover = GameObject.Find("UIHover").GetComponent<AudioSource>();
+        uiOpen = GameObject.Find("UIOpen").GetComponent<AudioSource>();
+        uiClose = GameObject.Find("UIClose").GetComponent<AudioSource>();
+        
+    }
+
+    public void Update()
+    {
+        CheckPaused();
+    }
+
+    public void OnButtonEnter(BaseEventData eventData)
+    {
+        Hover();
+    }
+
+    public void CheckPaused()
+    {
+        for (var c = 0; c < canvasSearch.Length; c++)
+        {
+            if (Time.timeScale == 0 && canvasSearch[c].enabled == false)
+            {
+                Unpause();
+            }
+        }
+    }
+    
+    public void ConfirmPrompt()
+    {
+        uiConfirmPrompt.Play();
+    }
+    
+    public void Select()
+    {
+        uiSelect.Play();
+    }
+    
+    public void Cancel()
+    {
+        uiCancel.Play();
+    }
+    
+    public void Hover()
+    {
+        uiHover.Play();
+    }
+    
+
     public void OpenUI(GameObject ui)
     {
         ui.SetActive(true);
+        uiOpen.Play();
+        
     }
     
     public void CloseUI(GameObject ui)
     {
+        if (ui.activeSelf)
+        {
+            uiClose.Play();
+        }
+        
         ui.SetActive(false);
+        
+        
     }
     
     public void ToggleUI(GameObject ui)
     {
         ui.SetActive(!ui.activeSelf);
+        if (ui.activeSelf)
+        {
+            uiOpen.Play();
+        }
+        else
+        {
+            uiClose.Play();
+        }
     }
     
     public void EnableControls()

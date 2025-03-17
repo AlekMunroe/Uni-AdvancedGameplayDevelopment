@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using PlayerControls;
 
 public class LeverInteraction : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class LeverInteraction : MonoBehaviour
     void Update()
     {
         //Wait for input
-        if (_isPlayer && Input.GetKeyDown(KeyCode.P))
+        if (_isPlayer && Input.GetKeyDown(PlayerControls.PlayerControls.interactKey))
         {
             _isLeverOn = !_isLeverOn;
         }

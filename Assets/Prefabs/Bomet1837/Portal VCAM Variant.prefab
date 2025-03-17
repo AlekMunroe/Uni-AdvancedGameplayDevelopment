@@ -59,6 +59,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 176910895693296250, guid: b44c2ef40e2573a4587c403b18c6451f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 176910895693296251, guid: b44c2ef40e2573a4587c403b18c6451f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d2b75d2011bdca4ebd766177dffa147, type: 2}
     - target: {fileID: 176910895693296255, guid: b44c2ef40e2573a4587c403b18c6451f, type: 3}
       propertyPath: newCamera
       value: 
@@ -67,9 +75,34 @@ PrefabInstance:
       propertyPath: oldCamera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 206152971199267962, guid: b44c2ef40e2573a4587c403b18c6451f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 176910895693296255, guid: b44c2ef40e2573a4587c403b18c6451f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b44c2ef40e2573a4587c403b18c6451f, type: 3}
+--- !u!1 &2435662341837894634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6528985951177416084, guid: b44c2ef40e2573a4587c403b18c6451f, type: 3}
+  m_PrefabInstance: {fileID: 8887479891838709374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &3934583483614793759
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435662341837894634}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 4c290383a353de3488b1342d8bb35e51, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 4c290383a353de3488b1342d8bb35e51, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!65 &8728583395275758602 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 176910895693296244, guid: b44c2ef40e2573a4587c403b18c6451f, type: 3}
@@ -92,7 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980d6de3068ff604c89c5e91c21b32bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameras: []
   _currentCameraIndex: 0
   _travelLocation: 1000
   boxCollider: {fileID: 8728583395275758602}

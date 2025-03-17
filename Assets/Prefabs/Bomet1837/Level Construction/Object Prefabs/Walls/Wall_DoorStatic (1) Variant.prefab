@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1779061070635821658, guid: adaeda049a5927048af1cb4fe6b79733, type: 3}
       propertyPath: m_Name
-      value: Wall_DoorStatic (1)
+      value: Wall_DoorStatic (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3404840658991848735, guid: adaeda049a5927048af1cb4fe6b79733, type: 3}
       propertyPath: m_RootOrder
@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4899990297521990297, guid: adaeda049a5927048af1cb4fe6b79733, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9f08a5b93056b74fb4a27f3f8b6f42d, type: 2}
     - target: {fileID: 4899990297573337130, guid: adaeda049a5927048af1cb4fe6b79733, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.061531
@@ -63,6 +67,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -17.420238
       objectReference: {fileID: 0}
+    - target: {fileID: 4899990297573337300, guid: adaeda049a5927048af1cb4fe6b79733, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9f08a5b93056b74fb4a27f3f8b6f42d, type: 2}
     - target: {fileID: 4899990297714280309, guid: adaeda049a5927048af1cb4fe6b79733, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.034398
@@ -71,5 +79,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -20.479761
       objectReference: {fileID: 0}
+    - target: {fileID: 4899990297714280311, guid: adaeda049a5927048af1cb4fe6b79733, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9f08a5b93056b74fb4a27f3f8b6f42d, type: 2}
+    - target: {fileID: 8932066612459365203, guid: adaeda049a5927048af1cb4fe6b79733, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9f08a5b93056b74fb4a27f3f8b6f42d, type: 2}
+    - target: {fileID: 8932066613327135587, guid: adaeda049a5927048af1cb4fe6b79733, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -6538903991835684241, guid: 2b3644b34a54f7649b6fc8c76fd28918, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adaeda049a5927048af1cb4fe6b79733, type: 3}

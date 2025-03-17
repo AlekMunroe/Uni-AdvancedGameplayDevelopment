@@ -18,6 +18,9 @@ public class PortalInterfaceVcamVariant: MonoBehaviour, IInteraction
     
     [Tooltip("How far the player moves along the X axis.")]
     [SerializeField] private float _travelLocation = 1000;
+
+    [Header("Audio Settings")]
+    public AudioSource warpSound;
     
     public BoxCollider boxCollider; //Used for drawing the box of the travel location
     
@@ -26,6 +29,7 @@ public class PortalInterfaceVcamVariant: MonoBehaviour, IInteraction
     public void Interact()
     {
         TTCCinemachineVariant.Instance.TimeTravel(_currentCameraIndex, _travelLocation);
+        warpSound.Play();
     }
 
 #if UNITY_EDITOR

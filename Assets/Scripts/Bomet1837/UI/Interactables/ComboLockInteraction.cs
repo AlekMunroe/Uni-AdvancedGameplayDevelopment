@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PlayerControls;
 
 public class ComboLockInteraction : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class ComboLockInteraction : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(PlayerControls.PlayerControls.interactKey))
         {
             Interact();
         }
@@ -25,7 +26,10 @@ public class ComboLockInteraction : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        isInteractable = true;
+       if (!comboLockUI.activeSelf)
+       {
+           isInteractable = true;
+       }
     }
     
     private void OnTriggerExit(Collider other)
@@ -39,6 +43,7 @@ public class ComboLockInteraction : MonoBehaviour
         if (isInteractable)
         {
             UIFunctions.ToggleUI(comboLockUI);
+            
         }
     }
 }
