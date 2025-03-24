@@ -6,24 +6,33 @@ using UnityEngine;
 public class MusicDirector : MonoBehaviour
 {
     [SerializeField] private AudioSource musicPast, musicFuture ; 
+    private Pause PM;
     private TimelineIdentifier playerTimeline;
     public float fadeDuration = 1.0f;
 
     private void Awake()
     {
-        playerTimeline = FindObjectOfType<TimelineIdentifier>();   
+        playerTimeline = FindObjectOfType<TimelineIdentifier>();
+        PM = FindObjectOfType<Pause>();
+    
+        musicFuture.Play(); musicPast.Play();
+        if (playerTimeline != null) { musicPast.volume = 100; musicFuture.volume = 0; }
+
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        //if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Demo_MainMenu")
-       // {
+        if(playerTimeline != null)
+        {
         if (playerTimeline.currentTimeline == 1)
         {
             if (musicFuture.isPlaying)
             {
                 StartCoroutine(FadeOut(musicFuture));
-                StartCoroutine(FadeIn(musicPast));
+                if (!musicPast.isPlaying)
+                {
+                    StartCoroutine(FadeIn(musicPast));
+                }
             }
         
         }
@@ -32,10 +41,35 @@ public class MusicDirector : MonoBehaviour
             if(musicPast.isPlaying)
             {
                 StartCoroutine(FadeOut(musicPast));
-                StartCoroutine(FadeIn(musicFuture));
+                if (!musicFuture.isPlaying)
+                {
+                    StartCoroutine(FadeIn(musicFuture));
+                }
             }
         }
-       // }
+       }
+       else
+       {
+           Debug.LogError("TimelineIdentifier not found in the scene.");
+       }
+
+       if (PM != null)
+       {
+              if (PM.isPaused)
+              {
+                musicPast.Pause();
+                musicFuture.Pause();
+              }
+              else
+              {
+                musicPast.UnPause();
+                musicFuture.UnPause();
+              }
+         }
+         else
+         {
+            Debug.LogError("Pause menu script not found in the scene.");
+              }
     }
 
     private IEnumerator FadeIn(AudioSource audioSource)

@@ -38,7 +38,8 @@ public class UIFunctions : MonoBehaviour
 
     public void Update()
     {
-        CheckPaused();
+        // CheckPaused();
+        Debug.Log(Time.timeScale);
     }
 
     public void OnButtonEnter(BaseEventData eventData)
@@ -128,6 +129,11 @@ public class UIFunctions : MonoBehaviour
 
     public void OOB(GameObject player, Vector3 position)
     {
+        if (player.CompareTag("Player"))
+        {
+            PlayerController.Instance.FreezePlayer(0.5f);
+        }
+
         player.transform.position = position;
     }
     
@@ -135,17 +141,46 @@ public class UIFunctions : MonoBehaviour
 
     public void Pause()
     {
+        if (PlayerController.Instance != null && PlayerController.Instance._controller != null)
+        {
+            PlayerController.Instance._controller.enabled = false;
+        }
+        else
+        {
+            Debug.LogError("Player Controller not found!");
+        }
+
         Time.timeScale = 0;
+        if (Time.timeScale != 0)
+        {
+            Debug.LogError("Time.timeScale is not 0 after using the pause method!");
+        }
+        
     }
     
     public void Unpause()
     {
+        if (PlayerController.Instance != null && PlayerController.Instance._controller != null)
+        {
+            PlayerController.Instance._controller.enabled = true;
+        }
+        else
+        {
+            Debug.LogError("Player Controller not found!");
+            
+        }
+
         Time.timeScale = 1;
+        if (Time.timeScale != 1)
+        {
+            Debug.LogError("Time.timeScale is not 1 after using the unpause method!");
+        }
     }
     
     public void TogglePause()
     {
         Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+        PlayerController.Instance._controller.enabled = !PlayerController.Instance._controller.enabled;
     }
 
     public void Restart()

@@ -16,6 +16,8 @@ public class HUDElements : MonoBehaviour
     public TMP_Text locationDate, level, objective, messageText;
     public MsgSystem ldNode, ldNode2, levelNode, levelNode2, objNode;
     public List<MsgSystem> messages;
+
+    private float ci = 0f, cna = 5f;
     
     
     [SerializeField] private UIFunctions _uiFunctions;
@@ -68,7 +70,27 @@ public class HUDElements : MonoBehaviour
         
         
         UpdateMessages();
-        InteractableMessageUpdates();
+
+        /*if (messages.Count > 0)*/ InteractableMessageUpdates();
+
+        if (messages.Count != 0)
+        {
+            messageText.gameObject.SetActive(true);
+            
+        }
+        else
+        {
+            messageText.gameObject.SetActive(false);
+        }
+        
+
+        //debug: count messages output per few seconds
+        
+        if (Time.time >= cna)
+        {
+            Debug.Log(messages.Count + " messages in the queue in the last 5 seconds.");
+            cna += ci;
+        }
     }
 
     void InteractableMessageUpdates()
@@ -162,13 +184,27 @@ public class HUDElements : MonoBehaviour
     {
         messageText.text = string.Join("\n", messages.ConvertAll(m => m.message));
 
+/*
         if (messages.Count > 0)
         {
-            for(int i = messages.Count - 1; i >= 0; i--)
+            List <MsgSystem> toRemove = new List<MsgSystem>();
+
+            foreach (var m in messages)
             {
-                StartCoroutine(RemoveMessage(messages[i], 5f));
+                StartCoroutine(RemoveMessage(m, 5f, toRemove));
+                toRemove.Add(m);
+            }
+
+            foreach (var m in toRemove)
+            {
+                messages.Remove(m);
             }
         }
+*/
+foreach (var m in messages.ToArray())
+{
+    StartCoroutine(RemoveMessage(m, 5f));
+}
 
         foreach (var message in messages)
         {
@@ -197,6 +233,39 @@ public class HUDElements : MonoBehaviour
     IEnumerator RemoveMessage(MsgSystem message, float delay)
     {
         yield return new WaitForSeconds(delay);
-        message.Remove(messages);
+
+        if (messages.Contains(message))
+        {
+            messages.Remove(message);
+        }
+
+        foreach (var interactable in interactables)
+    {
+        foreach (var i in interactable)
+        {
+            switch (i)
+            {
+                case KeyItem keyItem when keyItem != null && message.message.Contains(keyItem.keyName):
+//                    keyItem.messageDisplayed = false;
+                    break;
+
+                case ContainerController container when container != null && message.message.Contains(container.contName):
+//                  container.messageDisplayed = false;
+                    break;
+
+                case DoorController door when door != null && message.message.Contains("Door"):
+//                    door.messageDisplayed = false;
+                    break;
+
+                case ComboLockController comboLock when comboLock != null && message.message.Contains(comboLock.gameObject.name):
+//                    comboLock.messageDisplayed = false;
+                    break;
+
+                case BlackLight_Pickup blacklight when blacklight != null && message.message.Contains(blacklight.gameObject.name):
+//                    blacklight.messageDisplayed = false;
+                    break;
+            }
+        }
+    }
     }
 }

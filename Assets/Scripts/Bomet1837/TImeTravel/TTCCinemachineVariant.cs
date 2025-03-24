@@ -17,11 +17,18 @@ public class TTCCinemachineVariant : MonoBehaviour
     public CinemachineVirtualCamera[] cameras;
     [SerializeField] private GameObject fadeUI;
     private GameObject _playerObject;
+    public Transform playerTransformDebug;
     private bool _isTravelling, _justSwitched;
 
     void Start()
     {
         _playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (_playerObject == null)
+        {
+            Debug.LogError("Player object not found");
+        }
+
+        playerTransformDebug = _playerObject.transform;
 
         if (Instance == null)
         {
@@ -71,8 +78,10 @@ public class TTCCinemachineVariant : MonoBehaviour
 
         
         //Move the player (+travelLocation on the x)
+        StartCoroutine(PlayerController.Instance.FreezePlayer(0.1f));
+
         _playerObject.transform.position = new Vector3(_playerObject.transform.position.x + travelLocation,
-            _playerObject.transform.position.y + 0.1f, _playerObject.transform.position.z);
+        _playerObject.transform.position.y + 0.1f, _playerObject.transform.position.z);
 
         //Fade out
         fadeUI.GetComponent<Animation>().Play("FadeOutAnim");

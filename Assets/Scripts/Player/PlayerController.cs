@@ -1,27 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
+
 
 /// <summary>
 /// This script will handle the player movement and rotation
 /// </summary>
 
-[RequireComponent(typeof(Rigidbody))]
+
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
     
     [Header("Movement and Input")]
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float gravity = 10f;
-    private float turnSpeed = 5, currentAngle, currentAngleVelocity;
-    
-    [HideInInspector] public Rigidbody _rb;
+    public float speed = 5f, gravity = 10f, jumpForce = 10f, turnSpeed = 15f;
+    private Vector3 _velocity;
+
     [HideInInspector] public Vector3 _input, _camEuler, _targetPos, _moveDir;
     private Camera _camera;
+    private Transform _cameraTransform;
     [SerializeField] private Animator _animator;
+    [HideInInspector] public CharacterController _controller;
     private PlayerAudioController _audioController;
+    private bool _isPlayerFrozen;
 
     [Header("Jumping")] 
     [SerializeField] private Transform groundCheck;
@@ -36,12 +39,29 @@ public class PlayerController : MonoBehaviour
     [Header("Required Player Objects")] 
     public Transform playerPushPosition; //This has to be public
 
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        _controller = GetComponent<CharacterController>();
+    }
+
     void Start()
     {
         _audioController = GetComponent<PlayerAudioController>();
-        _rb = this.GetComponent<Rigidbody>();
+
+        if (_controller == null)
+        {
+            Debug.LogError("Character Controller not found!");
+        }
         _camera = Camera.main;
-        _animator = this.GetComponentInChildren<Animator>();
+        _animator = GetComponentInChildren<Animator>();
 
         Instance = this;
         if (Instance != null)
@@ -57,47 +77,41 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        HandleMovement();
-        HandleJumping();
-        
+        if (!_isPlayerFrozen) { HandleMovement(); HandleJumping(); _controller.enabled = true; }
+        else                  { _controller.enabled = false; }
     }
 
     void FixedUpdate()
     {
         HandleAnim();
-        GroundMat();
     }
 
     void HandleMovement()
     {
-        //Get the input from the user
-        _input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
-        _camEuler = _camera.transform.eulerAngles;
+            _isGrounded = _controller.isGrounded;
+            if (_isGrounded && _velocity.y < 0)
+            {
+                _velocity.y = -2f;
+            }
         
-        if (_input.magnitude >= 0.1f) 
-        {
-            
+
+        
+            //Get the input from the user
+            _input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+            _camEuler = _camera.transform.eulerAngles;
+
             //Calculate the angle to rotate the player
-            float targetAngle = Mathf.Atan2(_input.x, _input.z) * Mathf.Rad2Deg + _camEuler.y;
-                
-            currentAngle = Mathf.SmoothDampAngle(currentAngle, targetAngle, ref currentAngleVelocity, turnSpeed);
-            currentAngle = Mathf.Clamp(currentAngle, -90, 90);
-            transform.rotation = Quaternion.Euler(0, targetAngle, 0); //Look position
-
-            
-            _moveDir = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
-        } 
+            Transform cameraTransform = _camera.transform;
+            _moveDir = (cameraTransform.forward * _input.z + cameraTransform.right * _input.x).normalized;
+            _moveDir.y = 0;
         
-        //Actually move
-        if (_input.magnitude >= 0.1f || !_isGrounded)
-        {
-            transform.localPosition += speed * Time.deltaTime * _moveDir;
-        }
-        else if (_input.magnitude < 0.1f && _isGrounded)
-        {
-            _rb.velocity = Vector3.zero;
-        }
-
+            if (_input.magnitude >= 0.1f) 
+            {
+                Quaternion targetRot = Quaternion.LookRotation(_moveDir);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, turnSpeed * Time.deltaTime);
+                
+                _controller.Move(_moveDir * speed * Time.deltaTime);        
+            }
     }
 
     void HandleAnim()
@@ -108,30 +122,40 @@ public class PlayerController : MonoBehaviour
 
     void HandleJumping()
     {
-        //Check if the player is grounded
-        _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask | LayerMask.GetMask("PuzzleBox"));
-        
-        if (!_isGrounded)
-        {
-            //Force the player onto the ground
-            _rb.AddForce(Vector3.down * gravity);
-        }
+        //Gravity
+        _velocity.y -= gravity * Time.deltaTime;
+        _controller.Move(_velocity * Time.deltaTime);
         
         //Handle jumping
         if (Input.GetButtonDown("Jump") && _isGrounded)
         {
             _audioController.PlayJump();
-            _rb.AddForce(Vector3.up * gravity, ForceMode.Impulse);
-            _isGrounded = false;
+            _velocity.y = Mathf.Sqrt(jumpForce * 2f * gravity);
         }
     }
 
-    void GroundMat()
+    public IEnumerator FreezePlayer(float duration)
     {
-        
+        if (duration != 0)
+        {
+            //Freeze player with time
+            _isPlayerFrozen = true;
+
+            yield return new WaitForSeconds(duration);
+
+            _isPlayerFrozen = false;
+        }
+        else
+        {
+            //Freeze player until toggled off
+            _isPlayerFrozen = true;
+        }
     }
 
-    void OnCollisionEnter(Collision collision)
+        
+    
+
+    void OnControllerColliderHit(ControllerColliderHit collision)
     {
         Renderer renderer = collision.collider.GetComponent<Renderer>();
         if (renderer != null)
