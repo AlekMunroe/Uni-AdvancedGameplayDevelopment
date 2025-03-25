@@ -18,9 +18,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f, gravity = 10f, jumpForce = 10f, turnSpeed = 15f;
     private Vector3 _velocity;
 
-    [HideInInspector] public Vector3 _input, _camEuler, _targetPos, _moveDir;
+    [HideInInspector] public Vector3 _input, _targetPos, _moveDir;
     private Camera _camera;
-    private Transform _cameraTransform;
     [SerializeField] private Animator _animator;
     [HideInInspector] public CharacterController _controller;
     private PlayerAudioController _audioController;
@@ -98,7 +97,6 @@ public class PlayerController : MonoBehaviour
         
             //Get the input from the user
             _input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
-            _camEuler = _camera.transform.eulerAngles;
 
             //Calculate the angle to rotate the player
             Transform cameraTransform = _camera.transform;
@@ -164,7 +162,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                Debug.Log("No renderer found!");
+                Debug.LogError("No renderer found!");
             }
         
     }

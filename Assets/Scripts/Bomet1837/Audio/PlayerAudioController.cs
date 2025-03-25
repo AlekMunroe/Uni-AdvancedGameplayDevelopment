@@ -131,7 +131,7 @@ public class PlayerAudioController : MonoBehaviour
     {
         if (playerController._input.magnitude >= 0.1f && footstepTimer >= footstepCooldown)
         {
-            Debug.Log("Player is grounded and moving.");
+           // Debug.Log("Player is grounded and moving.");
             string matCurrent = GetMatName(playerController.currentMat.name);
             for (var i = 0; i < materials.Length; i++)
             {
@@ -140,7 +140,7 @@ public class PlayerAudioController : MonoBehaviour
                     string matName = GetMatName(materials[i][j].name);
                     if (matCurrent == matName)
                     {
-                        Debug.Log("Playing footstep sound for material: " + materials[i][j].name);
+                    //    Debug.Log("Playing footstep sound for material: " + materials[i][j].name);
                         footsteps[i][Random.Range(0, footsteps[i].Length)].Play();
                         footstepTimer = 0f;
                         return;
@@ -153,7 +153,7 @@ public class PlayerAudioController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Player is not grounded or not moving.");
+ //           Debug.Log("Player is not grounded or not moving.");
         }
     }
 

@@ -6,21 +6,18 @@ using UnityEngine;
 public class MusicDirector : MonoBehaviour
 {
     [SerializeField] private AudioSource musicPast, musicFuture ; 
-    private Pause PM;
     private TimelineIdentifier playerTimeline;
     public float fadeDuration = 1.0f;
 
     private void Awake()
     {
         playerTimeline = FindObjectOfType<TimelineIdentifier>();
-        PM = FindObjectOfType<Pause>();
-    
         musicFuture.Play(); musicPast.Play();
         if (playerTimeline != null) { musicPast.volume = 100; musicFuture.volume = 0; }
 
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if(playerTimeline != null)
         {
@@ -53,22 +50,24 @@ public class MusicDirector : MonoBehaviour
            Debug.LogError("TimelineIdentifier not found in the scene.");
        }
 
-       if (PM != null)
+       if (UIFunctions.Instance != null)
        {
-              if (PM.isPaused)
+              if (UIFunctions.Instance._isPaused)
               {
+                Debug.Log("Music should be paused.");
                 musicPast.Pause();
                 musicFuture.Pause();
               }
               else
               {
+                Debug.Log("Music should be unpaused.");
                 musicPast.UnPause();
                 musicFuture.UnPause();
               }
          }
          else
          {
-            Debug.LogError("Pause menu script not found in the scene.");
+            Debug.LogError("UI Functions script not found in the scene.");
               }
     }
 

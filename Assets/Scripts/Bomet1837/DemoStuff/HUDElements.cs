@@ -88,7 +88,7 @@ public class HUDElements : MonoBehaviour
         
         if (Time.time >= cna)
         {
-            Debug.Log(messages.Count + " messages in the queue in the last 5 seconds.");
+ //           Debug.Log(messages.Count + " messages in the queue in the last 5 seconds.");
             cna += ci;
         }
     }

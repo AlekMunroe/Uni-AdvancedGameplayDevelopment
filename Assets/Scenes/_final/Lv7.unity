@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 14172327}
   - component: {fileID: 14172326}
   m_Layer: 0
-  m_Name: Cube (15)
+  m_Name: D4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 14172324}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 3.6338806, y: 0.25, z: 3.1338866}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -573,7 +573,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -629,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (17)
+      value: C2
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -655,7 +655,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &34422480 stripped
 Transform:
@@ -668,7 +677,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382500
+  m_Name: pb_Mesh234104
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -832,7 +841,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382368
+  m_Name: pb_Mesh233928
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1003,7 +1012,7 @@ GameObject:
   - component: {fileID: 74058631}
   - component: {fileID: 74058630}
   m_Layer: 0
-  m_Name: Cube (19)
+  m_Name: D5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1018,7 +1027,7 @@ Transform:
   m_GameObject: {fileID: 74058628}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 3.63388, y: 0.25, z: 3.8838866}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -1167,7 +1176,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -1223,7 +1232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (8)
+      value: D4
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -1249,7 +1258,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &95714793 stripped
 Transform:
@@ -1613,7 +1631,7 @@ GameObject:
   - component: {fileID: 99412605}
   - component: {fileID: 99412604}
   m_Layer: 0
-  m_Name: Cube (11)
+  m_Name: D3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1628,7 +1646,7 @@ Transform:
   m_GameObject: {fileID: 99412602}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 3.6338816, y: 0.25, z: 2.3838866}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -1800,7 +1818,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382486
+  m_Name: pb_Mesh234090
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1964,7 +1982,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382268
+  m_Name: pb_Mesh233790
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2131,7 +2149,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -2187,7 +2205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (3)
+      value: A6
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -2213,7 +2231,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &146528797 stripped
 Transform:
@@ -2229,7 +2256,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -2285,7 +2312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (22)
+      value: C1
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -2311,13 +2338,40 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &157862485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_PrefabInstance: {fileID: 157862484}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &161682934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 917989142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &161682941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161682934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &172421303
 GameObject:
   m_ObjectHideFlags: 0
@@ -3015,7 +3069,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -3071,7 +3125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (12)
+      value: D3
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -3097,7 +3151,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &184734977 stripped
 Transform:
@@ -3454,7 +3517,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382538
+  m_Name: pb_Mesh234172
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4001,7 +4064,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382234
+  m_Name: pb_Mesh233752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4190,6 +4253,24 @@ Transform:
   m_Father: {fileID: 1780792610}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &239478287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 146528796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &239478294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239478287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &255292149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4265,7 +4346,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -4321,7 +4402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (4)
+      value: C5
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -4347,7 +4428,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &273291030 stripped
 Transform:
@@ -4868,7 +4958,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382784
+  m_Name: pb_Mesh234578
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5379,7 +5469,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -5435,7 +5525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (19)
+      value: B2
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -5461,7 +5551,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &318927722 stripped
 Transform:
@@ -5601,7 +5700,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-334102
+  m_Name: pb_Mesh234048
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6141,7 +6240,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382284
+  m_Name: pb_Mesh233806
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6643,6 +6742,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &405924046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 899724308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &405924053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405924046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1001 &411242797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6708,7 +6825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (9)
+      value: B4
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -6734,7 +6851,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &411242798 stripped
 Transform:
@@ -6747,7 +6873,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382400
+  m_Name: pb_Mesh233980
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7249,6 +7375,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &428957619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 1252163782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &428957626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428957619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1001 &469519471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7258,7 +7402,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -7314,7 +7458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate
+      value: D6
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -7340,7 +7484,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &469519472 stripped
 Transform:
@@ -7357,6 +7510,10 @@ PrefabInstance:
     - target: {fileID: 5455241403537758610, guid: 8ad0320b2a2c943448b2d9fb0fde73e6, type: 3}
       propertyPath: m_Name
       value: CompletionScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455241403537758610, guid: 8ad0320b2a2c943448b2d9fb0fde73e6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5455241403537758611, guid: 8ad0320b2a2c943448b2d9fb0fde73e6, type: 3}
       propertyPath: m_Pivot.x
@@ -7542,6 +7699,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8728583395275758599, guid: b30d7aa7f5b58eb4093cb8197045e41e, type: 3}
   m_PrefabInstance: {fileID: 517762325}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &525350093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 2094831270}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &525350100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525350093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1001 &533459316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7652,7 +7827,7 @@ GameObject:
   - component: {fileID: 541622829}
   - component: {fileID: 541622828}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: A3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7667,7 +7842,7 @@ Transform:
   m_GameObject: {fileID: 541622826}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 0.38388133, y: 0.25, z: 2.3838835}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -7749,7 +7924,7 @@ GameObject:
   - component: {fileID: 552501405}
   - component: {fileID: 552501404}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: A2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7764,7 +7939,7 @@ Transform:
   m_GameObject: {fileID: 552501402}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 0.38388228, y: 0.25, z: 1.6338835}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -7839,7 +8014,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382562
+  m_Name: pb_Mesh234200
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7997,6 +8172,24 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &590172673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 1984031234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &590172680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590172673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &597746282
 GameObject:
   m_ObjectHideFlags: 0
@@ -8347,7 +8540,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382618
+  m_Name: pb_Mesh234306
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8518,7 +8711,7 @@ GameObject:
   - component: {fileID: 641406125}
   - component: {fileID: 641406124}
   m_Layer: 0
-  m_Name: Cube (17)
+  m_Name: B5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8533,7 +8726,7 @@ Transform:
   m_GameObject: {fileID: 641406122}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 1.3838801, y: 0.25, z: 3.8838844}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -8615,7 +8808,7 @@ GameObject:
   - component: {fileID: 663179392}
   - component: {fileID: 663179391}
   m_Layer: 0
-  m_Name: Cube (10)
+  m_Name: C3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8630,7 +8823,7 @@ Transform:
   m_GameObject: {fileID: 663179389}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 2.6338816, y: 0.25, z: 2.3838856}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -9640,7 +9833,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382586
+  m_Name: pb_Mesh234224
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9804,7 +9997,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382734
+  m_Name: pb_Mesh234506
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9975,7 +10168,7 @@ GameObject:
   - component: {fileID: 747847017}
   - component: {fileID: 747847016}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: B1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9990,7 +10183,7 @@ Transform:
   m_GameObject: {fileID: 747847014}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 1.383883, y: 0.25, z: 0.88388443}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -10409,7 +10602,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382204
+  m_Name: pb_Mesh233718
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11007,6 +11200,24 @@ Transform:
   m_Father: {fileID: 364464205}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &838618372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 1344434683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &838618379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838618372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &850253257
 GameObject:
   m_ObjectHideFlags: 0
@@ -11985,6 +12196,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &866297379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 900718744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &866297386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866297379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &873598800
 GameObject:
   m_ObjectHideFlags: 0
@@ -12335,7 +12564,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382676
+  m_Name: pb_Mesh234406
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12499,7 +12728,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382340
+  m_Name: pb_Mesh233876
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12666,7 +12895,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -12722,7 +12951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (16)
+      value: D2
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -12748,7 +12977,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &899724309 stripped
 Transform:
@@ -12764,7 +13002,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -12820,7 +13058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (10)
+      value: C4
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -12846,7 +13084,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &900718745 stripped
 Transform:
@@ -12862,7 +13109,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -12918,7 +13165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (15)
+      value: B3
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -12944,7 +13191,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &901316851 stripped
 Transform:
@@ -12957,7 +13213,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382524
+  m_Name: pb_Mesh234158
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13124,7 +13380,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -13180,7 +13436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (6)
+      value: D5
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -13206,7 +13462,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &909972102 stripped
 Transform:
@@ -13253,7 +13518,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -13309,7 +13574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (5)
+      value: A5
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -13335,13 +13600,58 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &917989143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_PrefabInstance: {fileID: 917989142}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &936730045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 469519471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &936730052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936730045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
+--- !u!1 &953839824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 95714792}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &953839831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953839824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &971798842
 GameObject:
   m_ObjectHideFlags: 0
@@ -13355,7 +13665,7 @@ GameObject:
   - component: {fileID: 971798845}
   - component: {fileID: 971798844}
   m_Layer: 0
-  m_Name: Cube (23)
+  m_Name: D6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13370,7 +13680,7 @@ Transform:
   m_GameObject: {fileID: 971798842}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 3.6338794, y: 0.25, z: 4.6338863}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -14205,7 +14515,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382146
+  m_Name: pb_Mesh233624
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14372,7 +14682,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -14428,7 +14738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (13)
+      value: C3
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -14454,13 +14764,40 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &1001571959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_PrefabInstance: {fileID: 1001571958}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1010748986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 1456232628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1010748993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010748986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &1013557073
 GameObject:
   m_ObjectHideFlags: 0
@@ -15283,7 +15620,7 @@ GameObject:
   - component: {fileID: 1066646348}
   - component: {fileID: 1066646347}
   m_Layer: 0
-  m_Name: Cube (14)
+  m_Name: C4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15298,7 +15635,7 @@ Transform:
   m_GameObject: {fileID: 1066646345}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 2.6338806, y: 0.25, z: 3.1338856}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -15373,7 +15710,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382414
+  m_Name: pb_Mesh233994
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15544,7 +15881,7 @@ GameObject:
   - component: {fileID: 1104140140}
   - component: {fileID: 1104140139}
   m_Layer: 0
-  m_Name: Cube (18)
+  m_Name: C5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15559,7 +15896,7 @@ Transform:
   m_GameObject: {fileID: 1104140137}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 2.63388, y: 0.25, z: 3.8838856}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -15641,7 +15978,7 @@ GameObject:
   - component: {fileID: 1106474584}
   - component: {fileID: 1106474583}
   m_Layer: 0
-  m_Name: Cube (13)
+  m_Name: B4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15656,7 +15993,7 @@ Transform:
   m_GameObject: {fileID: 1106474581}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 1.3838809, y: 0.25, z: 3.1338844}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -15738,7 +16075,7 @@ GameObject:
   - component: {fileID: 1117061990}
   - component: {fileID: 1117061989}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: D2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15753,7 +16090,7 @@ Transform:
   m_GameObject: {fileID: 1117061987}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 3.6338825, y: 0.25, z: 1.6338866}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -15937,7 +16274,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382864
+  m_Name: pb_Mesh234668
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16101,7 +16438,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382218
+  m_Name: pb_Mesh233736
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16272,7 +16609,7 @@ GameObject:
   - component: {fileID: 1154679803}
   - component: {fileID: 1154679802}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: B2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16287,7 +16624,7 @@ Transform:
   m_GameObject: {fileID: 1154679800}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 1.3838825, y: 0.25, z: 1.6338844}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -16356,6 +16693,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154679800}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1163230587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 1694694677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1163230594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163230587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &1175479542
 GameObject:
   m_ObjectHideFlags: 0
@@ -16735,6 +17090,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1197526548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 1001571958}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1197526555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197526548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &1198031250
 GameObject:
   m_ObjectHideFlags: 3
@@ -16843,7 +17216,7 @@ GameObject:
   - component: {fileID: 1198743379}
   - component: {fileID: 1198743378}
   m_Layer: 0
-  m_Name: Cube (12)
+  m_Name: A4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16858,7 +17231,7 @@ Transform:
   m_GameObject: {fileID: 1198743376}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 0.38388062, y: 0.25, z: 3.1338835}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -17040,7 +17413,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382458
+  m_Name: pb_Mesh234062
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17211,7 +17584,7 @@ GameObject:
   - component: {fileID: 1250562562}
   - component: {fileID: 1250562561}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: D1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17226,7 +17599,7 @@ Transform:
   m_GameObject: {fileID: 1250562559}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 3.633883, y: 0.25, z: 0.8838866}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -17304,7 +17677,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -17360,7 +17733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (21)
+      value: D1
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -17386,7 +17759,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &1252163783 stripped
 Transform:
@@ -17803,6 +18185,24 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1320775852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 184734976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1320775859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320775852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1001 &1344434683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17812,7 +18212,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -17868,7 +18268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (14)
+      value: A3
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -17894,13 +18294,40 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &1344434684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_PrefabInstance: {fileID: 1344434683}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1368124268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 273291029}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1368124275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368124268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!850595691 &1389140027
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -17976,7 +18403,7 @@ GameObject:
   - component: {fileID: 1392696415}
   - component: {fileID: 1392696414}
   m_Layer: 0
-  m_Name: Cube (22)
+  m_Name: C6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17991,7 +18418,7 @@ Transform:
   m_GameObject: {fileID: 1392696412}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 2.6338794, y: 0.25, z: 4.6338854}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -18404,6 +18831,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1414189854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 411242797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1414189861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414189854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &1419687181
 GameObject:
   m_ObjectHideFlags: 0
@@ -18761,7 +19206,7 @@ GameObject:
   - component: {fileID: 1421494175}
   - component: {fileID: 1421494174}
   m_Layer: 0
-  m_Name: Cube (16)
+  m_Name: A5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18776,7 +19221,7 @@ Transform:
   m_GameObject: {fileID: 1421494172}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 0.3838799, y: 0.25, z: 3.8838835}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -18858,7 +19303,7 @@ GameObject:
   - component: {fileID: 1440106661}
   - component: {fileID: 1440106660}
   m_Layer: 0
-  m_Name: Cube (21)
+  m_Name: B6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18873,7 +19318,7 @@ Transform:
   m_GameObject: {fileID: 1440106658}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 1.3838794, y: 0.25, z: 4.6338844}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -18951,7 +19396,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -19007,7 +19452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (2)
+      value: B6
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -19033,7 +19478,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &1456232629 stripped
 Transform:
@@ -19426,7 +19880,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -19482,7 +19936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (1)
+      value: C6
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -19508,7 +19962,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &1531841197 stripped
 Transform:
@@ -19521,7 +19984,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382170
+  m_Name: pb_Mesh233666
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19688,7 +20151,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -19744,7 +20207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (18)
+      value: A2
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -19770,7 +20233,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &1551315256 stripped
 Transform:
@@ -19860,7 +20332,7 @@ GameObject:
   - component: {fileID: 1578470616}
   - component: {fileID: 1578470615}
   m_Layer: 0
-  m_Name: Cube (20)
+  m_Name: A6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19875,7 +20347,7 @@ Transform:
   m_GameObject: {fileID: 1578470613}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 0.38387942, y: 0.25, z: 4.6338835}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -20406,7 +20878,7 @@ GameObject:
   - component: {fileID: 1603057655}
   - component: {fileID: 1603057654}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: C2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20421,7 +20893,7 @@ Transform:
   m_GameObject: {fileID: 1603057652}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 2.6338825, y: 0.25, z: 1.6338856}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -20490,6 +20962,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603057652}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1616842929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 157862484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1616842936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616842929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
+--- !u!1 &1622645017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 1551315255}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1622645024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622645017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1001 &1629143050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20499,7 +21007,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -20555,7 +21063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (20)
+      value: A1
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -20581,7 +21089,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &1629143051 stripped
 Transform:
@@ -20594,7 +21111,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382898
+  m_Name: pb_Mesh234706
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20813,7 +21330,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382432
+  m_Name: pb_Mesh234022
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21315,6 +21832,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1670099848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 318927721}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1670099855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670099848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &1681716504
 GameObject:
   m_ObjectHideFlags: 0
@@ -21614,7 +22149,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -21670,7 +22205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (23)
+      value: B1
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -21696,7 +22231,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &1694694678 stripped
 Transform:
@@ -22603,30 +23147,30 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 469519472}
-  - {fileID: 1531841197}
-  - {fileID: 1456232629}
-  - {fileID: 146528797}
-  - {fileID: 273291030}
-  - {fileID: 917989143}
-  - {fileID: 909972102}
-  - {fileID: 2094831271}
-  - {fileID: 95714793}
-  - {fileID: 411242798}
-  - {fileID: 900718745}
-  - {fileID: 1984031235}
-  - {fileID: 184734977}
-  - {fileID: 1001571959}
-  - {fileID: 1344434684}
-  - {fileID: 901316851}
-  - {fileID: 899724309}
-  - {fileID: 34422480}
-  - {fileID: 1551315256}
-  - {fileID: 318927722}
   - {fileID: 1629143051}
-  - {fileID: 1252163783}
-  - {fileID: 157862485}
+  - {fileID: 1551315256}
+  - {fileID: 1344434684}
+  - {fileID: 1984031235}
+  - {fileID: 917989143}
+  - {fileID: 146528797}
   - {fileID: 1694694678}
+  - {fileID: 318927722}
+  - {fileID: 901316851}
+  - {fileID: 411242798}
+  - {fileID: 2094831271}
+  - {fileID: 1456232629}
+  - {fileID: 157862485}
+  - {fileID: 34422480}
+  - {fileID: 1001571959}
+  - {fileID: 900718745}
+  - {fileID: 273291030}
+  - {fileID: 1531841197}
+  - {fileID: 1252163783}
+  - {fileID: 899724309}
+  - {fileID: 184734977}
+  - {fileID: 95714793}
+  - {fileID: 909972102}
+  - {fileID: 469519472}
   m_Father: {fileID: 1465869569}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22636,7 +23180,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382756
+  m_Name: pb_Mesh234546
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22838,7 +23382,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 43.1
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -22871,8 +23415,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811162557}
-  m_LocalRotation: {x: 0.07767701, y: 0.15087198, z: -0.011892619, w: 0.98542506}
-  m_LocalPosition: {x: -6.6163282, y: 4.7254753, z: -17.04645}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -0.00000035762784}
+  m_LocalPosition: {x: 0.45794332, y: 1.7708138, z: 5.048609}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22919,7 +23463,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382708
+  m_Name: pb_Mesh234462
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23083,7 +23627,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382804
+  m_Name: pb_Mesh234598
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23312,6 +23856,42 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1202931993}
+--- !u!1 &1866025008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 1531841196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1866025015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866025008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
+--- !u!1 &1876577972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 1629143050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1876577979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876577972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &1887644749
 GameObject:
   m_ObjectHideFlags: 0
@@ -23325,7 +23905,7 @@ GameObject:
   - component: {fileID: 1887644752}
   - component: {fileID: 1887644751}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: C1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23340,7 +23920,7 @@ Transform:
   m_GameObject: {fileID: 1887644749}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 2.633883, y: 0.25, z: 0.8838856}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -23476,13 +24056,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1892948944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 34422479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1892948951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892948944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!43 &1913859825
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382324
+  m_Name: pb_Mesh233856
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23646,7 +24244,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382878
+  m_Name: pb_Mesh234682
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24492,6 +25090,42 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1958662205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 909972101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1958662212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958662205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
+--- !u!1 &1964912496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8948716327469349950, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+  m_PrefabInstance: {fileID: 901316850}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1964912503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964912496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa63018457354e94dbbca8a6165748dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: 0
 --- !u!1 &1969275597
 GameObject:
   m_ObjectHideFlags: 0
@@ -24534,7 +25168,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -24590,7 +25224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (11)
+      value: A4
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -24616,7 +25250,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &1984031235 stripped
 Transform:
@@ -24629,7 +25272,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382472
+  m_Name: pb_Mesh234076
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25144,7 +25787,7 @@ GameObject:
   - component: {fileID: 2016248385}
   - component: {fileID: 2016248384}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: A1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25159,7 +25802,7 @@ Transform:
   m_GameObject: {fileID: 2016248382}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 0.383883, y: 0.25, z: 0.8838835}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -25469,7 +26112,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382308
+  m_Name: pb_Mesh233840
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25633,7 +26276,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382190
+  m_Name: pb_Mesh233704
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25800,7 +26443,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7658362553177583198, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_LocalScale.x
@@ -25856,7 +26499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797128154829958247, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Name
-      value: PressurePlate (7)
+      value: B5
       objectReference: {fileID: 0}
     - target: {fileID: 7945612354002548936, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
       propertyPath: m_Mesh
@@ -25882,7 +26525,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1304501814}
-    m_RemovedComponents: []
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948716327469349941, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
+      propertyPath: requiredWeight
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306093537292503483, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37f4dde0a3682e445a1684733240efcc, type: 3}
 --- !u!4 &2094831271 stripped
 Transform:
@@ -25895,7 +26547,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382690
+  m_Name: pb_Mesh234420
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26066,7 +26718,7 @@ GameObject:
   - component: {fileID: 2099038985}
   - component: {fileID: 2099038984}
   m_Layer: 0
-  m_Name: Cube (9)
+  m_Name: B3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26081,7 +26733,7 @@ Transform:
   m_GameObject: {fileID: 2099038982}
   m_LocalRotation: {x: 0.000000059604645, y: 0.7071065, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 1.3838818, y: 0.25, z: 2.3838844}
-  m_LocalScale: {x: 0.021412756, y: 0.00030526027, z: 0.021412756}
+  m_LocalScale: {x: 0.09894224, y: 0.0011488196, z: 0.08058498}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1655857454}
@@ -26156,7 +26808,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh382770
+  m_Name: pb_Mesh234560
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

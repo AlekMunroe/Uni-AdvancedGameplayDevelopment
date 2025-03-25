@@ -11,7 +11,7 @@ public class BoxDisplayController : MonoBehaviour
     [SerializeField] private Image _displayDecal;
     
     [SerializeField] private int _signalsRequired;
-    [SerializeField] private BoxRequisiteDisplay_PressurePlate[] _signals;
+    [SerializeField] private SignalEmitter_PressurePlate[] _signals;
     
     public bool _isActivated;
     public BoxDisplayController instance;

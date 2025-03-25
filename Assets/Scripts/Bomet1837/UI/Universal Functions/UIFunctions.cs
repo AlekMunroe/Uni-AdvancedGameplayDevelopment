@@ -10,6 +10,7 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class UIFunctions : MonoBehaviour
 {
+    public static UIFunctions Instance;
     
     public AudioSource
     uiConfirmPrompt,
@@ -19,13 +20,20 @@ public class UIFunctions : MonoBehaviour
     uiOpen,
     uiClose;
 
-    Canvas[] canvasSearch;
+
+    [HideInInspector] public bool _isPaused;
     
-
-
     public void Start()
     {
-        canvasSearch = FindObjectsOfType<Canvas>();
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+
 
         uiConfirmPrompt = GameObject.Find("UIConfirmPrompt").GetComponent<AudioSource>();
         uiSelect = GameObject.Find("UISelect").GetComponent<AudioSource>();
@@ -38,26 +46,20 @@ public class UIFunctions : MonoBehaviour
 
     public void Update()
     {
-        // CheckPaused();
-        Debug.Log(Time.timeScale);
-    }
-
-    public void OnButtonEnter(BaseEventData eventData)
-    {
-        Hover();
-    }
-
-    public void CheckPaused()
-    {
-        for (var c = 0; c < canvasSearch.Length; c++)
+        if (_isPaused)
         {
-            if (Time.timeScale == 0 && canvasSearch[c].enabled == false)
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            if (Time.timeScale != 1)
             {
-                Unpause();
+                Debug.LogWarning("Time.timeScale is not 1.");
             }
         }
     }
-    
+
     public void ConfirmPrompt()
     {
         uiConfirmPrompt.Play();
@@ -94,9 +96,17 @@ public class UIFunctions : MonoBehaviour
         }
         
         ui.SetActive(false);
+    }
+
+    public void CloseMenu(GameObject menu)
+    {
+        if (menu.activeSelf)
+        {
+            uiClose.Play();
+        }
+        
+        menu.SetActive(false);
         Unpause();
-        
-        
     }
     
     public void ToggleUI(GameObject ui)
@@ -131,7 +141,8 @@ public class UIFunctions : MonoBehaviour
     {
         if (player.CompareTag("Player"))
         {
-            PlayerController.Instance.FreezePlayer(0.5f);
+            StartCoroutine(PlayerController.Instance.FreezePlayer(0.1f));
+            player.transform.position = position;
         }
 
         player.transform.position = position;
@@ -141,46 +152,17 @@ public class UIFunctions : MonoBehaviour
 
     public void Pause()
     {
-        if (PlayerController.Instance != null && PlayerController.Instance._controller != null)
-        {
-            PlayerController.Instance._controller.enabled = false;
-        }
-        else
-        {
-            Debug.LogError("Player Controller not found!");
-        }
-
-        Time.timeScale = 0;
-        if (Time.timeScale != 0)
-        {
-            Debug.LogError("Time.timeScale is not 0 after using the pause method!");
-        }
-        
+        _isPaused = true;
     }
     
     public void Unpause()
     {
-        if (PlayerController.Instance != null && PlayerController.Instance._controller != null)
-        {
-            PlayerController.Instance._controller.enabled = true;
-        }
-        else
-        {
-            Debug.LogError("Player Controller not found!");
-            
-        }
-
-        Time.timeScale = 1;
-        if (Time.timeScale != 1)
-        {
-            Debug.LogError("Time.timeScale is not 1 after using the unpause method!");
-        }
+        _isPaused = false;
     }
     
     public void TogglePause()
     {
-        Time.timeScale = Time.timeScale == 0 ? 1 : 0;
-        PlayerController.Instance._controller.enabled = !PlayerController.Instance._controller.enabled;
+        _isPaused = !_isPaused;
     }
 
     public void Restart()
