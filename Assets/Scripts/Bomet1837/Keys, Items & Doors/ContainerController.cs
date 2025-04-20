@@ -11,7 +11,8 @@ public class ContainerController : MonoBehaviour, IInteraction
     public enum ContType
     {
         Default,
-        Lvl6_DisplayTrigger
+        Lvl6_DisplayTrigger,
+        PressurePlate_Trigger
     }
 
     
@@ -28,6 +29,8 @@ public class ContainerController : MonoBehaviour, IInteraction
     [HideInInspector] public bool messageDisplayed = false;
     [HideInInspector] public bool wasItLocked = false;
     [HideInInspector] public bool wasItKeyless = false;
+    [SerializeField] private SignalEmitter_PressurePlate[] signalEmitter;
+    public bool willFindObjectOfTypeEmitter = true;
     
 
     public void Start()
@@ -36,6 +39,25 @@ public class ContainerController : MonoBehaviour, IInteraction
         {
             requiredKey = null;
         }
+
+        if (contType == ContType.PressurePlate_Trigger)
+        {
+            if (willFindObjectOfTypeEmitter)
+            {
+                signalEmitter = FindObjectsOfType<SignalEmitter_PressurePlate>();
+                if (signalEmitter == null)
+                {
+                    Debug.LogError("SignalEmitter_PressurePlate components not found");
+                }
+            }
+            else
+            {
+                Debug.LogError("No SignalEmitter_PressurePlate component found on " + gameObject.name);
+                Debug.LogWarning("Emitter component auto assignment disabled, please assign it manually!");
+            }
+
+        }
+        
         
     }
     
@@ -103,6 +125,30 @@ public class ContainerController : MonoBehaviour, IInteraction
             Debug.Log(OnLevelDisplaysAtReqValue.instance._dispsActivatedBool.All(x => x == true)
                 ? "All displays are activated"
                 : "Not all displays are activated.");
+        }
+        else if (contType == ContType.PressurePlate_Trigger)
+        {
+            if (signalEmitter != null)
+            {
+                if (signalEmitter.All(x => x.signal == true))
+                {
+                    // The signals are all active, so we can activate the container
+                    containerObject.SetActive(false);
+                    if (!contents.activeSelf)
+                    {
+                        contents.SetActive(true);
+                    }
+                }
+                else
+                {
+                    // The signals are not all active, so we can deactivate the container
+                    containerObject.SetActive(true);
+                    if (contents.activeSelf)
+                    {
+                        contents.SetActive(false);
+                    }
+                }
+            }
         }
     }
 

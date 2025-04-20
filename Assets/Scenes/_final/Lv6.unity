@@ -504,6 +504,7 @@ MonoBehaviour:
   uiHover: {fileID: 0}
   uiOpen: {fileID: 0}
   uiClose: {fileID: 0}
+  _isPaused: 0
 --- !u!114 &74554390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,6 +521,7 @@ MonoBehaviour:
   - {fileID: 1908329597}
   - {fileID: 1362505828}
   fadeUI: {fileID: 2041110729}
+  playerTransformDebug: {fileID: 0}
 --- !u!114 &74554391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,8 +582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 949539857}
-  uiFunctions: {fileID: 74554389}
-  isPaused: 0
 --- !u!114 &74554395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56932,7 +56932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5455241404234058810, guid: 8ad0320b2a2c943448b2d9fb0fde73e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Demo_EndScene
+      value: Lv8
       objectReference: {fileID: 0}
     - target: {fileID: 5455241404234058810, guid: 8ad0320b2a2c943448b2d9fb0fde73e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
@@ -57436,7 +57436,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.884058, y: 1}
+    m_SensorSize: {x: 1.7773386, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -61068,7 +61068,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.884058, y: 1}
+    m_SensorSize: {x: 1.7773386, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -62044,7 +62044,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-274012
+  m_Name: pb_Mesh-137574
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -77,7 +77,14 @@ public class UIFunctions : MonoBehaviour
     
     public void Hover()
     {
-        uiHover.Play();
+        if (EventSystem.current.currentSelectedGameObject != null)
+        {
+            uiHover.Play();
+        }
+        else
+        {
+            Debug.LogWarning("No GameObject selected.");
+        }
     }
     
 

@@ -1751,7 +1751,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.884058, y: 1}
+    m_SensorSize: {x: 1.7773386, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1885,6 +1885,9 @@ MonoBehaviour:
   matLab:
   - {fileID: 2100000, guid: 19646bd34674d7b408a7f26d5f3e3e1e, type: 2}
   - {fileID: 2100000, guid: 7fc3047ee7f4fd247b6143def45a5a50, type: 2}
+  - {fileID: 2100000, guid: ea983e379f0c5c84d91eed0ccab7d625, type: 2}
+  - {fileID: 2100000, guid: 2124b9b10d74e96458f26bf64f845386, type: 2}
+  - {fileID: 2100000, guid: 7aa8a040c45d89646a2bf64ff7e00218, type: 2}
   matGravel: []
   footstepCooldown: 0.5
 --- !u!114 &8932870133802162902
@@ -1904,7 +1907,6 @@ MonoBehaviour:
   jumpForce: 1.5
   turnSpeed: 15
   _input: {x: 0, y: 0, z: 0}
-  _camEuler: {x: 0, y: 0, z: 0}
   _targetPos: {x: 0, y: 0, z: 0}
   _moveDir: {x: 0, y: 0, z: 0}
   _animator: {fileID: 0}

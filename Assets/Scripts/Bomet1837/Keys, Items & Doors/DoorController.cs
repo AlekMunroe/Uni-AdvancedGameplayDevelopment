@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
 
@@ -14,7 +15,16 @@ public class DoorController : MonoBehaviour, IInteraction
     
     [HideInInspector] public bool messageDisplayed = false;
     [HideInInspector] public bool wasItLocked = false;
-    
+    public bool isOneWay = false;
+
+    void Start()
+    {
+        if (requiredKey == "")
+        {
+            requiredKey = null;
+        }
+    }
+
     public virtual void Interact()
     {
         bool hasKey = KeyController.instance.CheckKeyChain(requiredKey);
@@ -49,6 +59,29 @@ public class DoorController : MonoBehaviour, IInteraction
             //The player does not have the key
             Debug.Log("The player does not have the key: " + requiredKey);
             wasItLocked = true;
+
+            if (requiredKey == null || requiredKey == "")
+            {
+               Debug.Log("No key required for this door, or key has not been set. Opening door anyway.");
+               doorObject.SetActive(false);
+               this.gameObject.GetComponent<BoxCollider>().enabled = false; //Stops re-triggering the door
+            }
         }
     }
+
+
+    public void Update()
+    {
+        if (isOneWay && doorObject.activeSelf == false)
+        {
+            StartCoroutine(ResetDoor());
+        }
+    }
+
+    public IEnumerator ResetDoor()
+    {
+        yield return new WaitForSeconds(3f);
+        doorObject.SetActive(true);
+        this.gameObject.GetComponent<BoxCollider>().enabled = true; //Stops re-triggering the door
+    }    
 }
